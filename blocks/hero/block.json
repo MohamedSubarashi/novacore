@@ -1,0 +1,64 @@
+{
+	"apiVersion": 3,
+	"name": "novacore/hero",
+	"title": "Hero Section",
+	"category": "novacore",
+	"icon": "welcome-widgets-menus",
+	"description": "Eye-catching hero section with heading, description, CTA buttons, and optional image.",
+	"keywords": ["hero", "header", "banner"],
+	"version": "1.0.0",
+	"textdomain": "novacore",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Welcome to NovaCore"
+		},
+		"description": {
+			"type": "string",
+			"default": "A premium WordPress theme built for performance, SEO, and unlimited customization."
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Get Started"
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"secondaryButtonText": {
+			"type": "string",
+			"default": "Learn More"
+		},
+		"secondaryButtonUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"alignment": {
+			"type": "string",
+			"default": "left"
+		},
+		"showImage": {
+			"type": "boolean",
+			"default": false
+		},
+		"imageUrl": {
+			"type": "string"
+		},
+		"style": {
+			"type": "string",
+			"default": "default"
+		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"color": {
+			"background": true,
+			"text": true,
+			"gradients": true
+		},
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	}
+}

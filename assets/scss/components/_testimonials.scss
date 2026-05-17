@@ -1,0 +1,98 @@
+// ============================================
+// NovaCore Testimonials
+// ============================================
+
+.novacore-testimonial {
+	padding: var(--nc-space-8);
+	background: var(--nc-surface);
+	border: 1px solid var(--nc-border);
+	border-radius: var(--nc-radius-xl);
+	position: relative;
+
+	&::before {
+		content: '"';
+		position: absolute;
+		top: var(--nc-space-4);
+		right: var(--nc-space-6);
+		font-size: 5rem;
+		line-height: 1;
+		font-family: Georgia, serif;
+		color: var(--nc-primary);
+		opacity: 0.15;
+	}
+
+	&__stars {
+		display: flex;
+		gap: var(--nc-space-1);
+		margin-bottom: var(--nc-space-4);
+
+		svg {
+			width: 18px;
+			height: 18px;
+			color: #16a34a;
+			fill: #16a34a;
+		}
+	}
+
+	&__text {
+		font-size: var(--nc-font-size-md);
+		color: var(--nc-contrast);
+		line-height: var(--nc-line-height-relaxed);
+		margin-bottom: var(--nc-space-6);
+		font-style: italic;
+	}
+
+	&__author {
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-3);
+
+		img {
+			width: 48px;
+			height: 48px;
+			border-radius: var(--nc-radius-full);
+			object-fit: cover;
+		}
+
+		&-info {
+			flex: 1;
+		}
+
+		&-name {
+			font-size: var(--nc-font-size-sm);
+			font-weight: var(--nc-font-weight-semibold);
+			color: var(--nc-heading);
+		}
+
+		&-role {
+			font-size: var(--nc-font-size-xs);
+			color: var(--nc-muted);
+		}
+	}
+
+	// Card style
+	&--card {
+		box-shadow: var(--nc-shadow-md);
+		transition: all var(--nc-transition-base);
+
+		&:hover {
+			transform: translateY(-4px);
+			box-shadow: var(--nc-shadow-xl);
+		}
+	}
+}
+
+// Testimonial grid
+.novacore-testimonials-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--nc-space-6);
+
+	@include media-md {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include media-xl {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

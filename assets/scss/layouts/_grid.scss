@@ -1,0 +1,131 @@
+// ============================================
+// NovaCore Grid & Layout System
+// ============================================
+
+.novacore-container {
+	@include container;
+}
+
+.novacore-layout {
+	display: flex;
+	flex-wrap: wrap;
+
+	> .novacore-main {
+		flex: 1 1 100%;
+		width: 100%;
+	}
+
+	> .novacore-sidebar {
+		flex: 1 1 100%;
+		width: 100%;
+	}
+
+	@include media-lg {
+		> .novacore-main {
+			flex: 1 1 0;
+			min-width: 0;
+			width: auto;
+		}
+
+		> .novacore-sidebar {
+			flex: 0 0 34%;
+			width: 34%;
+		}
+	}
+
+	// Full-width layouts (no sidebar)
+	&.novacore-layout--page,
+	&.novacore-layout--full,
+	&.novacore-layout--no-sidebar {
+		> .novacore-main {
+			flex: 1 1 100%;
+			width: 100%;
+		}
+
+		.novacore-sidebar {
+			display: none;
+		}
+	}
+
+	// Home page float layout
+	&.novacore-layout--home {
+		display: block;
+		width: 100%;
+		float: none;
+
+		@include media-lg {
+			width: 65%;
+			float: left;
+		}
+	}
+}
+
+.novacore-sidebar-area {
+	float: none;
+	width: 100%;
+
+	@include media-lg {
+		width: 34%;
+		float: right;
+	}
+}
+
+.novacore-main {
+	min-height: 50vh;
+	padding: var(--nc-space-8) 0;
+}
+
+.novacore-grid {
+	display: grid;
+	gap: var(--nc-space-6);
+}
+
+.novacore-posts {
+	margin-bottom: var(--nc-space-8);
+}
+
+// Footer grid
+.novacore-footer__grid {
+	display: grid;
+	gap: var(--nc-space-8);
+
+	&.novacore-grid-1 { grid-template-columns: 1fr; }
+	&.novacore-grid-2 { grid-template-columns: repeat(2, 1fr); }
+	&.novacore-grid-3 { grid-template-columns: repeat(3, 1fr); }
+	&.novacore-grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+	@include media-max-lg {
+		&.novacore-grid-3,
+		&.novacore-grid-4 {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@include media-max-sm {
+		&.novacore-grid-2,
+		&.novacore-grid-3,
+		&.novacore-grid-4 {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+// Related posts grid
+.novacore-related__grid {
+	display: grid;
+	gap: var(--nc-space-6);
+
+	@include media-sm {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@include media-max-sm {
+		grid-template-columns: 1fr;
+	}
+}
+
+.novacore-posts--masonry {
+	.novacore-card__thumbnail img {
+		width: 100%;
+	}
+}

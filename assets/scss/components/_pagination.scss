@@ -1,0 +1,66 @@
+// ============================================
+// NovaCore Pagination
+// ============================================
+
+.novacore-pagination {
+	padding: var(--nc-space-8) 0;
+	text-align: center;
+
+	.nav-links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: var(--nc-space-2);
+		flex-wrap: wrap;
+	}
+
+	.page-numbers {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 40px;
+		height: 40px;
+		padding: 0 var(--nc-space-3);
+		font-size: var(--nc-font-size-sm);
+		font-weight: var(--nc-font-weight-medium);
+		color: var(--nc-contrast);
+		background: var(--nc-base);
+		border: 1px solid var(--nc-border);
+		border-radius: var(--nc-radius-md);
+		transition: all var(--nc-transition-fast);
+		text-decoration: none;
+
+		&:hover {
+			color: var(--nc-primary);
+			border-color: var(--nc-primary);
+			background: var(--nc-primary-light);
+		}
+
+		&.current {
+			color: #fff;
+			background: var(--nc-primary);
+			border-color: var(--nc-primary);
+
+			&:hover {
+				color: #fff;
+				background: var(--nc-primary-hover);
+			}
+		}
+
+		&.dots {
+			border: none;
+			color: var(--nc-muted);
+			background: none;
+		}
+
+		&.prev,
+		&.next {
+			padding: 0 var(--nc-space-4);
+
+			&::before,
+			&::after {
+				font-size: var(--nc-font-size-lg);
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+// ============================================
+// NovaCore Page Layouts
+// ============================================
+
+.novacore-page-header {
+	margin-bottom: var(--nc-space-8);
+	padding-bottom: var(--nc-space-6);
+	border-bottom: 1px solid var(--nc-border);
+}
+
+.novacore-page-title {
+	font-size: var(--nc-font-size-3xl);
+	font-weight: var(--nc-font-weight-bold);
+	color: var(--nc-heading);
+
+	@include media-md {
+		font-size: var(--nc-font-size-4xl);
+	}
+}
+
+.novacore-archive-description {
+	margin-top: var(--nc-space-4);
+	color: var(--nc-contrast);
+	font-size: var(--nc-font-size-lg);
+}
+
+// Full width template - no changes needed (handled by .novacore-layout variants)
+
+// Landing page
+.page-template-landing-page {
+	.novacore-header {
+		&.is-transparent {
+			position: absolute;
+		}
+	}
+
+	.novacore-footer {
+		margin-top: 0;
+	}
+}
+
+// Boxed layout
+.site-layout-boxed {
+	.novacore-site {
+		max-width: 1400px;
+		margin: 0 auto;
+		background: var(--nc-base);
+		box-shadow: var(--nc-shadow-2xl);
+	}
+
+	.novacore-header {
+		max-width: 1400px;
+		margin: 0 auto;
+
+		&.is-sticky {
+			max-width: 1400px;
+		}
+	}
+}
+
+// Framed layout
+.site-layout-framed {
+	padding: var(--nc-space-4);
+	background: var(--nc-border-light);
+
+	@include media-md {
+		padding: var(--nc-space-8);
+	}
+
+	.novacore-site {
+		border-radius: var(--nc-radius-xl);
+		overflow: hidden;
+		box-shadow: var(--nc-shadow-lg);
+	}
+}

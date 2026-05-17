@@ -1,0 +1,179 @@
+# Translation of NovaCore in French
+# Copyright (C) 2024 NovaCore
+# This file is distributed under the GPL-2.0+ license.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: NovaCore 1.0.0\n"
+"Report-Msgid-Bugs-To: https://novacorewp.com/contact\n"
+"Last-Translator: NovaCore <translations@novacorewp.com>\n"
+"Language-Team: French <fr@li.org>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: NovaCore\n"
+"X-Domain: novacore\n"
+
+#: header.php:28
+msgid "Skip to content"
+msgstr "Aller au contenu"
+
+#: header.php:80 footer.php:22
+msgid "Toggle navigation"
+msgstr "Basculer la navigation"
+
+#: header.php:42
+msgid "Toggle dark mode"
+msgstr "Basculer le mode sombre"
+
+#: footer.php:71
+msgid "Scroll to top"
+msgstr "Retour en haut"
+
+#: inc/helpers/template-tags.php:41
+msgid "by"
+msgstr "par"
+
+#: inc/helpers/template-tags.php:65
+msgid "%s Comment"
+msgid_plural "%s Comments"
+msgstr[0] "%s commentaire"
+msgstr[1] "%s commentaires"
+
+#: inc/helpers/template-tags.php:98
+msgid "Posts navigation"
+msgstr "Navigation des articles"
+
+#: inc/helpers/template-tags.php:102
+msgid "Pagination"
+msgstr "Pagination"
+
+#: inc/helpers/template-tags.php:108
+msgid "Home"
+msgstr "Accueil"
+
+#: inc/helpers/template-tags.php:145
+msgid "Search results for:"
+msgstr "Résultats de recherche pour :"
+
+#: inc/helpers/template-tags.php:149
+msgid "404 Not Found"
+msgstr "404 Non trouvé"
+
+#: inc/helpers/template-tags.php:153
+msgid "Archive"
+msgstr "Archives"
+
+#: inc/helpers/template-tags.php:146 inc/core/Setup.php:246
+msgid "Search"
+msgstr "Rechercher"
+
+#: inc/helpers/template-tags.php:161
+msgid "Previous"
+msgstr "Précédent"
+
+#: inc/helpers/template-tags.php:165
+msgid "Next"
+msgstr "Suivant"
+
+#: inc/helpers/template-tags.php:248 inc/core/Setup.php:111
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: inc/core/Setup.php:112
+msgid "Secondary Menu"
+msgstr "Menu secondaire"
+
+#: inc/core/Setup.php:113
+msgid "Mobile Menu"
+msgstr "Menu mobile"
+
+#: inc/core/Setup.php:114
+msgid "Footer Menu"
+msgstr "Menu du pied de page"
+
+#: inc/core/Setup.php:115
+msgid "Top Bar Menu"
+msgstr "Menu de la barre supérieure"
+
+#: inc/core/Setup.php:117
+msgid "Recent Posts"
+msgstr "Articles récents"
+
+#: inc/core/Setup.php:118
+msgid "Categories"
+msgstr "Catégories"
+
+#: inc/core/Setup.php:119
+msgid "Tags"
+msgstr "Étiquettes"
+
+#: sidebar.php:81
+msgid "Follow Us"
+msgstr "Suivez-nous"
+
+#: inc/core/Header_Builder.php
+msgid "Toggle search"
+msgstr "Basculer la recherche"
+
+#: inc/core/Header_Builder.php
+msgid "Toggle cart"
+msgstr "Basculer le panier"
+
+#: inc/core/Header_Builder.php
+msgid "Search..."
+msgstr "Rechercher..."
+
+#: inc/core/Header_Builder.php
+msgid "Close search"
+msgstr "Fermer la recherche"
+
+#: inc/core/Header_Builder.php
+msgid "Close"
+msgstr "Fermer"
+
+#: inc/core/Header_Builder.php
+msgid "Off Canvas"
+msgstr "Panneau latéral"
+
+#: inc/core/Header_Builder.php
+msgid "Mobile navigation"
+msgstr "Navigation mobile"
+
+#: inc/core/Header_Builder.php
+msgid "Close navigation"
+msgstr "Fermer la navigation"
+
+#: inc/core/Header_Builder.php
+msgid "Go to slide %d"
+msgstr "Aller à la diapositive %d"
+
+#: inc/core/Header_Builder.php
+msgid "Stay Updated"
+msgstr "Restez informé"
+
+#: inc/core/Header_Builder.php
+msgid "Subscribe to our newsletter for the latest updates."
+msgstr "Abonnez-vous à notre newsletter pour les dernières mises à jour."
+
+#: inc/core/Header_Builder.php
+msgid "Enter your email"
+msgstr "Entrez votre email"
+
+#: inc/core/Header_Builder.php
+msgid "Subscribe"
+msgstr "S'abonner"
+
+#: inc/helpers/template-tags.php:219
+msgid "Edit %s"
+msgstr "Modifier %s"
+
+#: inc/helpers/template-tags.php:353
+msgid "%d min read"
+msgstr "%d min de lecture"
+
+#: inc/helpers/template-tags.php:271
+msgid "Create a menu"
+msgstr "Créer un menu"

@@ -1,0 +1,114 @@
+// ============================================
+// NovaCore Gutenberg Editor Styles
+// ============================================
+
+// These styles apply inside the Gutenberg editor iframe
+// and match the frontend design.
+
+:root {
+	--nc-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--nc-font-heading: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--nc-base: #ffffff;
+	--nc-base-alt: #f8fafc;
+	--nc-surface: #ffffff;
+	--nc-border: #e2e8f0;
+	--nc-contrast: #475569;
+	--nc-heading: #0f172a;
+	--nc-muted: #94a3b8;
+	--nc-primary: #16a34a;
+	--nc-primary-hover: #15803d;
+	--nc-primary-light: #dcfce7;
+	--nc-accent: #3b82f6;
+	--nc-radius-sm: 0.25rem;
+	--nc-radius-md: 0.5rem;
+	--nc-radius-lg: 0.75rem;
+	--nc-radius-xl: 1rem;
+}
+
+.editor-styles-wrapper {
+	font-family: var(--nc-font-body);
+	font-size: 1rem;
+	color: var(--nc-contrast);
+	line-height: 1.75;
+	background: var(--nc-base);
+
+	.wp-block {
+		max-width: 768px;
+
+		&[data-align="wide"] {
+			max-width: 1280px;
+		}
+
+		&[data-align="full"] {
+			max-width: none;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--nc-font-heading);
+		font-weight: 700;
+		color: var(--nc-heading);
+		line-height: 1.3;
+	}
+
+	h1 { font-size: 2.5rem; }
+	h2 { font-size: 2rem; }
+	h3 { font-size: 1.5rem; }
+	h4 { font-size: 1.25rem; }
+
+	p {
+		margin-bottom: 1rem;
+	}
+
+	a {
+		color: var(--nc-primary);
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.block-editor-block-list__block {
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.wp-block-button .wp-block-button__link {
+		border-radius: var(--nc-radius-md);
+		font-weight: 600;
+		background: var(--nc-primary);
+		color: #fff;
+		padding: 0.625rem 1.25rem;
+		transition: background 0.2s;
+
+		&:hover {
+			background: var(--nc-primary-hover);
+		}
+	}
+
+	.wp-block-image figcaption {
+		color: var(--nc-muted);
+		font-size: 0.875rem;
+		text-align: center;
+	}
+
+	.wp-block-quote {
+		border-left: 4px solid var(--nc-primary);
+		padding: 1rem 1.5rem;
+		background: var(--nc-base-alt);
+		border-radius: 0 var(--nc-radius-md) var(--nc-radius-md) 0;
+	}
+
+	.wp-block-separator {
+		border-color: var(--nc-border);
+	}
+
+	.wp-block-code {
+		background: var(--nc-base-alt);
+		border: 1px solid var(--nc-border);
+		border-radius: var(--nc-radius-md);
+		padding: 1rem;
+	}
+
+	.wp-block-cover {
+		border-radius: var(--nc-radius-lg);
+	}
+}

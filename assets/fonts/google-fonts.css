@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://localhost/Copper/wp-content/themes/novacore/assets/fonts/font-42fcd0ea12ff589f4ccf7cd1eb4b0bb8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://localhost/Copper/wp-content/themes/novacore/assets/fonts/font-e3bc8d7bbed7eb5328692f20824bd3d5.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://localhost/Copper/wp-content/themes/novacore/assets/fonts/font-dfca7a6d7aa06e1d67a1bd314c5b4b52.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://localhost/Copper/wp-content/themes/novacore/assets/fonts/font-07dabb19b170e3852ebdf10a85924e18.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://localhost/Copper/wp-content/themes/novacore/assets/fonts/font-5a66f8ceb794f00a7f54c797a21283b3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://localhost/Copper/wp-content/themes/novacore/assets/fonts/font-efef4d9d61ac26570557ad601dea222a.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://localhost/Copper/wp-content/themes/novacore/assets/fonts/font-3604d9d49b61fc3b7c29c4259c86ff89.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://localhost/Copper/wp-content/themes/novacore/assets/fonts/font-02384cdf43e3d24b76c57c66dfd114bf.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://localhost/Copper/wp-content/themes/novacore/assets/fonts/font-43e268268a3801a5ec2cf116ab01b114.ttf) format('truetype');
+}

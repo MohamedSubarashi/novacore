@@ -1,0 +1,118 @@
+// ============================================
+// NovaCore Modal Components
+// ============================================
+
+.novacore-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	@include flex-center;
+	z-index: var(--nc-z-modal);
+	padding: var(--nc-space-6);
+	opacity: 0;
+	visibility: hidden;
+	transition: all var(--nc-transition-base);
+
+	&.is-open {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(4px);
+		-webkit-backdrop-filter: blur(4px);
+	}
+
+	&__content {
+		position: relative;
+		width: 100%;
+		max-width: 560px;
+		max-height: 80vh;
+		overflow-y: auto;
+		background: var(--nc-base);
+		border-radius: var(--nc-radius-xl);
+		box-shadow: var(--nc-shadow-2xl);
+		padding: var(--nc-space-8);
+		transform: scale(0.95);
+		transition: transform var(--nc-transition-base);
+	}
+
+	&.is-open &__content {
+		transform: scale(1);
+	}
+
+	&__close {
+		position: absolute;
+		top: var(--nc-space-4);
+		right: var(--nc-space-4);
+		@include flex-center;
+		width: 36px;
+		height: 36px;
+		border-radius: var(--nc-radius-md);
+		color: var(--nc-contrast);
+		cursor: pointer;
+
+		&:hover {
+			background: var(--nc-base-alt);
+		}
+	}
+}
+
+// Quick view modal
+.novacore-quick-view {
+	.novacore-modal__content {
+		max-width: 900px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--nc-space-6);
+		padding: 0;
+		overflow: hidden;
+
+		@include media-max-md {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__image {
+		background: var(--nc-base-alt);
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__details {
+		padding: var(--nc-space-6);
+	}
+
+	&__title {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-2xl);
+		font-weight: var(--nc-font-weight-bold);
+		margin-bottom: var(--nc-space-3);
+	}
+
+	&__price {
+		font-size: var(--nc-font-size-xl);
+		font-weight: var(--nc-font-weight-semibold);
+		color: var(--nc-primary);
+		margin-bottom: var(--nc-space-4);
+	}
+
+	&__description {
+		font-size: var(--nc-font-size-sm);
+		color: var(--nc-contrast);
+		margin-bottom: var(--nc-space-6);
+		line-height: var(--nc-line-height-relaxed);
+	}
+}

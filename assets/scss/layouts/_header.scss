@@ -1,0 +1,238 @@
+// ============================================
+// NovaCore Header Layout
+// ============================================
+
+// --------------------------------------------------
+// Main Header (Logo Area)
+// --------------------------------------------------
+.novacore-header {
+	position: relative;
+	width: 100%;
+	background: var(--nc-header-bg, #15803d);
+	color: var(--nc-header-text, #ffffff);
+
+	&.is-sticky {
+		position: sticky;
+		top: 0;
+		z-index: var(--nc-z-sticky);
+		animation: nc-fade-down 0.3s ease;
+		box-shadow: var(--nc-shadow-md);
+
+		.admin-bar & {
+			top: 32px;
+
+			@media (max-width: 782px) {
+				top: 46px;
+			}
+		}
+	}
+
+	&__main {
+		position: relative;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: var(--nc-header-height);
+
+		@media (max-width: 739px) {
+			height: var(--nc-header-height-mobile);
+		}
+	}
+
+	&__left {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-3);
+		color: var(--nc-header-text);
+
+		.novacore-dark-toggle {
+			color: var(--nc-header-text);
+
+			&:hover {
+				color: var(--nc-accent);
+				background: rgba(255, 255, 255, 0.1);
+			}
+		}
+
+		.novacore-header__date {
+			color: var(--nc-header-text);
+		}
+
+		.novacore-header__action-btn,
+		a {
+			color: var(--nc-header-text);
+
+			&:hover {
+				color: var(--nc-accent);
+			}
+		}
+	}
+
+	&__brand {
+		flex: 1;
+		text-align: center;
+
+		.custom-logo-link {
+			display: inline-block;
+
+			img {
+				max-width: 240px;
+				width: auto;
+				max-height: 60px;
+			}
+		}
+
+		.novacore-logo {
+			font-family: var(--nc-font-heading);
+			font-size: var(--nc-font-size-2xl);
+			font-weight: var(--nc-font-weight-bold);
+			color: var(--nc-header-text, #ffffff);
+			text-decoration: none;
+			white-space: nowrap;
+			letter-spacing: -0.02em;
+		}
+
+		&-img-link {
+			display: inline-block;
+		}
+
+		&-img {
+			width: 175px;
+			height: 100px;
+			object-fit: contain;
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-2);
+		flex-shrink: 0;
+
+		// Social icons in header right
+		.novacore-social-icons {
+			display: flex;
+			align-items: center;
+			gap: 2px;
+
+			@media (max-width: 739px) {
+				display: none;
+			}
+		}
+
+		.novacore-social-icons__link {
+			@include flex-center;
+			width: 36px;
+			height: 36px;
+			border-radius: var(--nc-radius-md);
+			color: var(--nc-header-bg);
+			background: var(--nc-header-text);
+			transition: all var(--nc-transition-fast);
+			text-decoration: none;
+
+			&:hover {
+				background: var(--nc-accent-hover);
+				color: #fff;
+			}
+		}
+	}
+
+	// Action buttons in the right area
+	.novacore-header__action-btn {
+		@include flex-center;
+		width: 40px;
+		height: 40px;
+		border-radius: var(--nc-radius-md);
+		color: var(--nc-header-text, #ffffff);
+		background: none;
+		border: none;
+		cursor: pointer;
+		transition: all var(--nc-transition-fast);
+		flex-shrink: 0;
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.1);
+			color: #fff;
+		}
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	// Header right action group
+	&__actions {
+		@include flex-center;
+		gap: var(--nc-space-1);
+		flex-shrink: 0;
+	}
+}
+
+// --------------------------------------------------
+// Transparent Header Variant
+// --------------------------------------------------
+.has-transparent-header {
+
+	.novacore-header {
+		position: absolute;
+		background: transparent;
+		border-bottom: none;
+
+		.novacore-header__brand .novacore-logo {
+			color: #fff;
+		}
+	}
+}
+
+// --------------------------------------------------
+// Brand Section (site-logo + ad-1)
+// --------------------------------------------------
+.novacore-header__brand-section {
+	background: var(--nc-header-brand-bg, #ffffff);
+	border-bottom: 1px solid var(--nc-border, #e5e7eb);
+}
+
+.novacore-header__brand-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 90px;
+	padding: var(--nc-space-3) 0;
+	gap: var(--nc-space-4);
+
+	@media (max-width: 739px) {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+.novacore-header__brand-col {
+	flex: 1;
+
+	.novacore-header__brand {
+		text-align: left;
+
+		@media (max-width: 739px) {
+			text-align: center;
+		}
+	}
+}
+
+.novacore-header__ad-col {
+	flex-shrink: 0;
+	max-width: 728px;
+	width: 100%;
+
+	.novacore-novacore-ad-1 {
+		text-align: right;
+
+		@media (max-width: 739px) {
+			text-align: center;
+		}
+	}
+}

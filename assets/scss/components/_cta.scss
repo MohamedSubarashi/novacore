@@ -1,0 +1,45 @@
+// ============================================
+// NovaCore CTA (Call to Action)
+// ============================================
+
+.novacore-cta {
+	padding: var(--nc-space-16) 0;
+	text-align: center;
+	background: linear-gradient(135deg, var(--nc-primary), var(--nc-accent));
+	border-radius: var(--nc-radius-2xl);
+	margin: var(--nc-space-8) 0;
+
+	&__content {
+		max-width: 640px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-3xl);
+		font-weight: var(--nc-font-weight-extrabold);
+		color: #fff;
+		margin-bottom: var(--nc-space-4);
+
+		@include media-md {
+			font-size: var(--nc-font-size-4xl);
+		}
+	}
+
+	&__description {
+		font-size: var(--nc-font-size-lg);
+		color: rgba(255, 255, 255, 0.9);
+		margin-bottom: var(--nc-space-8);
+		line-height: var(--nc-line-height-relaxed);
+	}
+
+	.novacore-btn--primary {
+		background: #fff;
+		color: var(--nc-primary);
+
+		&:hover {
+			background: var(--nc-base-alt);
+			color: var(--nc-primary-hover);
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.novacore-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&--left { justify-content: flex-start; }
+	&--center { justify-content: center; }
+	&--right { justify-content: flex-end; }
+}

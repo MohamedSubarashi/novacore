@@ -1,0 +1,88 @@
+// ============================================
+// NovaCore Typography System
+// ============================================
+
+// Heading sizes
+h1, .h1 {
+	font-size: var(--nc-font-size-4xl);
+	line-height: var(--nc-line-height-tight);
+	letter-spacing: -0.025em;
+
+	@include media-sm {
+		font-size: var(--nc-font-size-5xl);
+	}
+	@include media-lg {
+		font-size: var(--nc-font-size-6xl);
+	}
+}
+
+h2, .h2 {
+	font-size: var(--nc-font-size-3xl);
+	line-height: var(--nc-line-height-tight);
+	letter-spacing: -0.02em;
+
+	@include media-md {
+		font-size: var(--nc-font-size-4xl);
+	}
+}
+
+h3, .h3 {
+	font-size: var(--nc-font-size-2xl);
+	line-height: var(--nc-line-height-snug);
+	letter-spacing: -0.015em;
+}
+
+h4, .h4 {
+	font-size: var(--nc-font-size-xl);
+	line-height: var(--nc-line-height-snug);
+}
+
+h5, .h5 {
+	font-size: var(--nc-font-size-lg);
+	line-height: var(--nc-line-height-normal);
+}
+
+h6, .h6 {
+	font-size: var(--nc-font-size-md);
+	line-height: var(--nc-line-height-normal);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+// Utility classes
+.nc-text-xs   { font-size: var(--nc-font-size-xs); }
+.nc-text-sm   { font-size: var(--nc-font-size-sm); }
+.nc-text-base { font-size: var(--nc-font-size-md); }
+.nc-text-lg   { font-size: var(--nc-font-size-lg); }
+.nc-text-xl   { font-size: var(--nc-font-size-xl); }
+.nc-text-2xl  { font-size: var(--nc-font-size-2xl); }
+.nc-text-3xl  { font-size: var(--nc-font-size-3xl); }
+
+.nc-font-light    { font-weight: var(--nc-font-weight-light); }
+.nc-font-regular  { font-weight: var(--nc-font-weight-regular); }
+.nc-font-medium   { font-weight: var(--nc-font-weight-medium); }
+.nc-font-semibold { font-weight: var(--nc-font-weight-semibold); }
+.nc-font-bold     { font-weight: var(--nc-font-weight-bold); }
+
+.nc-text-center   { text-align: center; }
+.nc-text-left     { text-align: left; }
+.nc-text-right    { text-align: right; }
+
+.nc-uppercase     { text-transform: uppercase; }
+.nc-capitalize    { text-transform: capitalize; }
+.nc-lowercase     { text-transform: lowercase; }
+
+.nc-tracking-tight  { letter-spacing: -0.025em; }
+.nc-tracking-normal { letter-spacing: 0; }
+.nc-tracking-wide   { letter-spacing: 0.025em; }
+
+.nc-leading-tight   { line-height: var(--nc-line-height-tight); }
+.nc-leading-snug    { line-height: var(--nc-line-height-snug); }
+.nc-leading-normal  { line-height: var(--nc-line-height-normal); }
+.nc-leading-relaxed { line-height: var(--nc-line-height-relaxed); }
+.nc-leading-loose   { line-height: var(--nc-line-height-loose); }
+
+// Gradient text
+.nc-gradient-text {
+	@include gradient-text(linear-gradient(135deg, var(--nc-primary), var(--nc-accent)));
+}

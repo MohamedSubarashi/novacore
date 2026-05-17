@@ -1,0 +1,58 @@
+// ============================================
+// NovaCore Main Stylesheet
+// ============================================
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/breakpoints';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/colors';
+@import 'base/animations';
+
+// Vendor
+@import 'vendor/reset';
+
+// Layouts
+@import 'layouts/grid';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/pages';
+
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/navigation';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/sidebar';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+@import 'components/modals';
+@import 'components/widgets';
+@import 'components/comments';
+@import 'components/hero';
+@import 'components/testimonials';
+@import 'components/pricing';
+@import 'components/faq';
+@import 'components/team';
+@import 'components/cta';
+@import 'components/counter';
+@import 'components/feature-grid';
+@import 'components/post-grid';
+@import 'components/share';
+@import 'components/slider';
+@import 'components/buttons-block';
+@import 'components/ad';
+
+// Pages
+@import 'pages/home';
+@import 'pages/blog';
+@import 'pages/single';
+@import 'pages/page';
+@import 'pages/error';
+@import 'pages/contact';

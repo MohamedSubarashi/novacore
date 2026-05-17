@@ -1,0 +1,30 @@
+{
+	"apiVersion": 3,
+	"name": "novacore/faq",
+	"title": "FAQ Accordion",
+	"category": "novacore",
+	"icon": "editor-help",
+	"description": "Frequently asked questions with expandable answers.",
+	"keywords": ["faq", "questions", "accordion"],
+	"version": "1.0.0",
+	"textdomain": "novacore",
+	"attributes": {
+		"question": {
+			"type": "string",
+			"default": "What is NovaCore?"
+		},
+		"answer": {
+			"type": "string",
+			"default": "NovaCore is a premium WordPress theme."
+		}
+	},
+	"supports": {
+		"align": ["wide"],
+		"color": {
+			"background": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	}
+}

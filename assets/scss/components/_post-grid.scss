@@ -1,0 +1,131 @@
+// ============================================
+// NovaCore Post Grid Block
+// ============================================
+
+.novacore-post-grid {
+	padding: var(--nc-space-8) 0;
+
+	&__header {
+		margin-bottom: var(--nc-space-8);
+	}
+
+	&__title {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-3xl);
+		font-weight: var(--nc-font-weight-extrabold);
+		color: var(--nc-heading);
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--nc-space-6);
+
+		@include media-md {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&--cols-3 &__grid {
+		@include media-xl {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&--cols-4 &__grid {
+		@include media-xl {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	&__card {
+		@include card-base;
+	}
+
+	&__thumbnail {
+		display: block;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 225px;
+			object-fit: cover;
+			transition: transform var(--nc-transition-slow);
+		}
+
+		&:hover img {
+			transform: scale(1.05);
+		}
+	}
+
+	&__body {
+		padding: var(--nc-space-6);
+	}
+
+	&__post-title {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-xl);
+		font-weight: var(--nc-font-weight-bold);
+		line-height: var(--nc-line-height-snug);
+		margin-bottom: var(--nc-space-3);
+
+		a {
+			color: var(--nc-heading);
+			text-decoration: none;
+
+			&:hover {
+				color: var(--nc-primary);
+			}
+		}
+	}
+
+	&__meta {
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-4);
+		font-size: var(--nc-font-size-sm);
+		color: var(--nc-muted);
+		margin-bottom: var(--nc-space-3);
+	}
+
+	&__date,
+	&__author {
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-1);
+	}
+
+	&__excerpt {
+		font-size: var(--nc-font-size-sm);
+		color: var(--nc-contrast);
+		line-height: var(--nc-line-height-relaxed);
+		margin-bottom: var(--nc-space-4);
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	&__read-more {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--nc-space-2);
+		font-size: var(--nc-font-size-sm);
+		font-weight: var(--nc-font-weight-semibold);
+		color: var(--nc-primary);
+		text-decoration: none;
+		transition: gap var(--nc-transition-fast);
+
+		svg {
+			transition: transform var(--nc-transition-fast);
+		}
+
+		&:hover {
+			gap: var(--nc-space-3);
+
+			svg {
+				transform: translateX(4px);
+			}
+		}
+	}
+}

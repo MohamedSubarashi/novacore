@@ -1,0 +1,211 @@
+// ============================================
+// NovaCore Sidebar Components
+// ============================================
+
+.novacore-sidebar {
+	padding: var(--nc-space-8) 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--nc-space-6);
+
+	@include media-lg {
+		padding: var(--nc-space-12) 0 0;
+	}
+
+	&__section {
+		.widget {
+			margin-bottom: var(--nc-space-6);
+			padding: var(--nc-space-6);
+			background: var(--nc-surface);
+			border: 1px solid var(--nc-border);
+			border-radius: var(--nc-radius-lg);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.widget-title {
+				font-family: var(--nc-font-heading);
+				font-size: var(--nc-font-size-base);
+				font-weight: var(--nc-font-weight-bold);
+				color: var(--nc-heading);
+				margin-bottom: var(--nc-space-4);
+				padding-bottom: var(--nc-space-3);
+				border-bottom: 2px solid var(--nc-primary);
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+				position: relative;
+
+				&::after {
+					display: none;
+				}
+			}
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				li {
+					padding: var(--nc-space-2) 0;
+					border-bottom: 1px solid var(--nc-border-light);
+					list-style: none;
+
+					&:last-child {
+						border-bottom: none;
+					}
+
+					a {
+						color: var(--nc-contrast);
+						font-size: var(--nc-font-size-sm);
+						transition: color var(--nc-transition-fast);
+
+						&:hover {
+							color: var(--nc-primary);
+						}
+					}
+				}
+			}
+
+			select {
+				width: 100%;
+			}
+		}
+
+		.tagcloud {
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--nc-space-2);
+
+			a {
+				padding: 0.3rem 0.85rem;
+				font-size: var(--nc-font-size-xs) !important;
+				background: var(--nc-base-alt);
+				border-radius: var(--nc-radius-sm);
+				color: var(--nc-contrast);
+				border: 1px solid var(--nc-border);
+				text-decoration: none;
+				transition: all var(--nc-transition-fast);
+
+				&:hover {
+					background: var(--nc-primary);
+					color: #fff;
+					border-color: var(--nc-primary);
+				}
+			}
+		}
+	}
+
+	// Trending section — numbered list style
+	&__trending {
+		.widget {
+			background: var(--nc-base);
+			border-color: var(--nc-primary);
+			border-left: 3px solid var(--nc-primary);
+
+			.widget-title {
+				color: var(--nc-primary);
+				border-bottom-color: var(--nc-primary);
+			}
+		}
+	}
+
+	// CTA section — accent background
+	&__cta {
+		.widget {
+			background: linear-gradient(135deg, var(--nc-primary-dark), var(--nc-accent));
+			border: none;
+			color: #fff;
+
+			.widget-title {
+				color: #fff;
+				border-bottom-color: rgba(255, 255, 255, 0.3);
+			}
+
+			a {
+				color: rgba(255, 255, 255, 0.9);
+
+				&:hover {
+					color: #fff;
+				}
+			}
+
+			label,
+			p {
+				color: rgba(255, 255, 255, 0.85);
+			}
+
+			input[type="email"],
+			input[type="text"] {
+				border-color: rgba(255, 255, 255, 0.3);
+				background: rgba(255, 255, 255, 0.1);
+				color: #fff;
+
+				&::placeholder {
+					color: rgba(255, 255, 255, 0.6);
+				}
+
+				&:focus {
+					border-color: rgba(255, 255, 255, 0.6);
+					box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+				}
+			}
+		}
+	}
+
+	// Bottom section — subtle border
+	&__bottom {
+		.widget {
+			background: var(--nc-base-alt);
+			border-style: dashed;
+		}
+	}
+
+	// Social section — larger icons
+	&__social {
+		.novacore-social-icons {
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--nc-space-3);
+		}
+
+		.novacore-social-icons__link {
+			@include flex-center;
+			width: 48px;
+			height: 48px;
+			border-radius: var(--nc-radius-lg);
+			background: var(--nc-header-bg);
+			color: var(--nc-header-text);
+			transition: all var(--nc-transition-fast);
+			text-decoration: none;
+
+			i {
+				font-size: 1.35rem;
+			}
+
+			&:hover {
+				background: var(--nc-accent-hover);
+				color: #fff;
+				transform: translateY(-2px);
+			}
+		}
+	}
+
+	// Sticky top section
+	&__sticky {
+		position: sticky;
+		top: calc(var(--nc-header-height) + var(--nc-space-4));
+		z-index: 1;
+
+		.widget {
+			background: var(--nc-base);
+			border: 2px dashed var(--nc-border);
+			text-align: center;
+			padding: var(--nc-space-8) var(--nc-space-6);
+
+			.widget-title {
+				text-align: left;
+			}
+		}
+	}
+}

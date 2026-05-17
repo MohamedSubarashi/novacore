@@ -1,0 +1,79 @@
+.novacore-share {
+	display: flex;
+	align-items: center;
+	gap: var(--nc-space-3);
+
+	&__label {
+		font-size: var(--nc-font-size-xs);
+		font-weight: var(--nc-font-weight-semibold);
+		color: var(--nc-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-2);
+	}
+
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: var(--nc-radius-full);
+		color: var(--nc-contrast);
+		background: var(--nc-surface-alt);
+		text-decoration: none;
+		transition: all var(--nc-transition-fast);
+
+		&:hover {
+			color: #fff;
+			transform: translateY(-2px);
+		}
+
+		&--facebook:hover {
+			background: #1877f2;
+		}
+
+		&--twitter:hover {
+			background: #14171a;
+		}
+
+		&--linkedin:hover {
+			background: #0077b5;
+		}
+
+		&--pinterest:hover {
+			background: #e60023;
+		}
+
+		&--telegram:hover {
+			background: #0088cc;
+		}
+
+		&--reddit:hover {
+			background: #ff4500;
+		}
+
+		&--whatsapp:hover {
+			background: #25d366;
+		}
+
+		&--email:hover {
+			background: var(--nc-primary);
+		}
+	}
+
+	&--card {
+		margin: var(--nc-space-3) 0;
+	}
+
+	&--single {
+		margin: var(--nc-space-4) 0;
+		padding-top: var(--nc-space-4);
+		border-top: 1px solid var(--nc-border);
+	}
+}

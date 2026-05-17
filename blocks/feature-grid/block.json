@@ -1,0 +1,40 @@
+{
+	"apiVersion": 3,
+	"name": "novacore/feature-grid",
+	"title": "Feature Grid",
+	"category": "novacore",
+	"icon": "screenoptions",
+	"description": "Display a grid of features with icons, titles, and descriptions.",
+	"keywords": ["features", "grid", "services"],
+	"version": "1.0.0",
+	"textdomain": "novacore",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Our Features"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Everything you need to succeed"
+		},
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"features": {
+			"type": "string",
+			"default": "Lightning Fast|Optimized for speed with modern performance best practices.\nFully Responsive|Looks perfect on every device, from mobile to desktop.\nSEO Ready|Built with semantic markup and schema.org structured data."
+		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	}
+}

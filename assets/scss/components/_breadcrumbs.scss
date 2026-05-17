@@ -1,0 +1,28 @@
+// ============================================
+// NovaCore Breadcrumbs
+// ============================================
+
+.novacore-breadcrumbs {
+	font-size: var(--nc-font-size-sm);
+	color: var(--nc-muted);
+	margin-bottom: var(--nc-space-4);
+	padding: var(--nc-space-3) 0;
+
+	a {
+		color: var(--nc-contrast);
+
+		&:hover {
+			color: var(--nc-primary);
+		}
+	}
+
+	.current {
+		color: var(--nc-heading);
+		font-weight: var(--nc-font-weight-medium);
+	}
+
+	.separator {
+		margin: 0 var(--nc-space-2);
+		color: var(--nc-muted);
+	}
+}

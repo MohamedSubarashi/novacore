@@ -1,0 +1,162 @@
+// ============================================
+// NovaCore Hero Component
+// ============================================
+
+.novacore-hero {
+	position: relative;
+	padding: var(--nc-space-16) 0;
+	overflow: hidden;
+
+	@include media-lg {
+		padding: var(--nc-space-24) 0;
+	}
+
+	// Background gradient
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+
+		.gradient-orb {
+			position: absolute;
+			border-radius: 50%;
+			filter: blur(80px);
+			opacity: 0.3;
+			animation: nc-pulse 4s ease-in-out infinite;
+
+			&:nth-child(1) {
+				width: 400px;
+				height: 400px;
+				background: var(--nc-primary);
+				top: -100px;
+				right: -100px;
+			}
+
+			&:nth-child(2) {
+				width: 300px;
+				height: 300px;
+				background: var(--nc-accent);
+				bottom: -50px;
+				left: -50px;
+				animation-delay: 2s;
+			}
+		}
+	}
+
+	// Content
+	&__container {
+		position: relative;
+		z-index: 1;
+		@include container;
+	}
+
+	&__content {
+		max-width: 720px;
+	}
+
+	&__subtitle {
+		display: inline-block;
+		padding: 0.375rem 1rem;
+		font-size: var(--nc-font-size-sm);
+		font-weight: var(--nc-font-weight-semibold);
+		color: var(--nc-primary);
+		background: var(--nc-primary-light);
+		border-radius: var(--nc-radius-full);
+		margin-bottom: var(--nc-space-4);
+	}
+
+	&__title {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-4xl);
+		font-weight: var(--nc-font-weight-extrabold);
+		color: var(--nc-heading);
+		line-height: var(--nc-line-height-tight);
+		margin-bottom: var(--nc-space-4);
+
+		@include media-md {
+			font-size: var(--nc-font-size-5xl);
+		}
+
+		@include media-lg {
+			font-size: var(--nc-font-size-6xl);
+		}
+
+		.gradient-text {
+			@include gradient-text(linear-gradient(135deg, var(--nc-primary), var(--nc-accent)));
+		}
+	}
+
+	&__description {
+		font-size: var(--nc-font-size-lg);
+		color: var(--nc-contrast);
+		line-height: var(--nc-line-height-relaxed);
+		margin-bottom: var(--nc-space-8);
+		max-width: 560px;
+
+		@include media-md {
+			font-size: var(--nc-font-size-xl);
+		}
+	}
+
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--nc-space-4);
+		align-items: center;
+	}
+
+	// Centered alignment
+	&--center &__content {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&--center &__description {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&--center &__actions {
+		justify-content: center;
+	}
+
+	// Image side
+	&--split {
+		.novacore-hero__container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: var(--nc-space-12);
+			align-items: center;
+
+			@include media-max-lg {
+				grid-template-columns: 1fr;
+				gap: var(--nc-space-8);
+			}
+		}
+
+		.novacore-hero__content {
+			max-width: 100%;
+		}
+
+		.novacore-hero__image {
+			img {
+				width: 100%;
+				height: auto;
+				border-radius: var(--nc-radius-xl);
+				box-shadow: var(--nc-shadow-2xl);
+			}
+		}
+	}
+
+	// Glass morphism style
+	&--glass {
+		.novacore-hero__content {
+			@include glass;
+			padding: var(--nc-space-8);
+			border-radius: var(--nc-radius-2xl);
+		}
+	}
+}

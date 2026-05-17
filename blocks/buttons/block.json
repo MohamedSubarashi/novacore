@@ -1,0 +1,45 @@
+{
+	"apiVersion": 3,
+	"name": "novacore/buttons",
+	"title": "Buttons",
+	"category": "novacore",
+	"icon": "button",
+	"description": "Multiple buttons with customizable styles, sizes, and links.",
+	"keywords": ["button", "buttons", "link"],
+	"version": "1.0.0",
+	"textdomain": "novacore",
+	"attributes": {
+		"buttons": {
+			"type": "array",
+			"default": [
+				{
+					"text": "Get Started",
+					"url": "#",
+					"style": "primary",
+					"size": "md"
+				},
+				{
+					"text": "Learn More",
+					"url": "#",
+					"style": "outline",
+					"size": "md"
+				}
+			]
+		},
+		"align": {
+			"type": "string",
+			"default": "left"
+		},
+		"gap": {
+			"type": "number",
+			"default": 12
+		}
+	},
+	"supports": {
+		"align": ["left", "center", "right"],
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	}
+}

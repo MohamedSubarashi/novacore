@@ -1,0 +1,65 @@
+// ============================================
+// NovaCore Team Cards
+// ============================================
+
+.novacore-team-card {
+	text-align: center;
+	padding: var(--nc-space-8);
+	background: var(--nc-surface);
+	border: 1px solid var(--nc-border);
+	border-radius: var(--nc-radius-xl);
+	transition: all var(--nc-transition-base);
+
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--nc-shadow-lg);
+	}
+
+	&__avatar {
+		margin-bottom: var(--nc-space-6);
+		display: flex;
+		justify-content: center;
+
+		img {
+			width: 96px;
+			height: 96px;
+			border-radius: var(--nc-radius-full);
+			object-fit: cover;
+		}
+
+		&-placeholder {
+			width: 96px;
+			height: 96px;
+			border-radius: var(--nc-radius-full);
+			background: linear-gradient(135deg, var(--nc-primary), var(--nc-accent));
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: var(--nc-font-size-2xl);
+			font-weight: var(--nc-font-weight-bold);
+			font-family: var(--nc-font-heading);
+		}
+	}
+
+	&__name {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-xl);
+		font-weight: var(--nc-font-weight-bold);
+		color: var(--nc-heading);
+		margin-bottom: var(--nc-space-1);
+	}
+
+	&__role {
+		font-size: var(--nc-font-size-sm);
+		color: var(--nc-primary);
+		font-weight: var(--nc-font-weight-medium);
+		margin-bottom: var(--nc-space-4);
+	}
+
+	&__bio {
+		font-size: var(--nc-font-size-sm);
+		color: var(--nc-contrast);
+		line-height: var(--nc-line-height-relaxed);
+	}
+}

@@ -1,0 +1,34 @@
+// ============================================
+// NovaCore Statistics Counter
+// ============================================
+
+.novacore-counter {
+	text-align: center;
+	padding: var(--nc-space-6);
+
+	&__number {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-5xl);
+		font-weight: var(--nc-font-weight-extrabold);
+		color: var(--nc-heading);
+		line-height: 1;
+		margin-bottom: var(--nc-space-2);
+
+		.novacore-counter__value {
+			@include gradient-text(linear-gradient(135deg, var(--nc-primary), var(--nc-accent)));
+		}
+
+		.novacore-counter__suffix {
+			font-size: var(--nc-font-size-3xl);
+			color: var(--nc-primary);
+		}
+	}
+
+	&__label {
+		font-size: var(--nc-font-size-sm);
+		color: var(--nc-contrast);
+		font-weight: var(--nc-font-weight-medium);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+}

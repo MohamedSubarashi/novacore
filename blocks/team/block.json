@@ -1,0 +1,34 @@
+{
+	"apiVersion": 3,
+	"name": "novacore/team",
+	"title": "Team Member",
+	"category": "novacore",
+	"icon": "groups",
+	"description": "Display a team member with photo, name, role, and social links.",
+	"keywords": ["team", "member", "profile"],
+	"version": "1.0.0",
+	"textdomain": "novacore",
+	"attributes": {
+		"name": {
+			"type": "string",
+			"default": "Jane Smith"
+		},
+		"role": {
+			"type": "string",
+			"default": "Designer"
+		},
+		"bio": {
+			"type": "string",
+			"default": "Creative designer with 5+ years of experience."
+		}
+	},
+	"supports": {
+		"align": ["wide"],
+		"color": {
+			"background": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	}
+}

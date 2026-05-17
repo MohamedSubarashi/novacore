@@ -1,0 +1,87 @@
+// NovaCore Advertisements
+// ---------------------------------------------------------------------------
+
+.novacore-ad-area {
+  text-align: center;
+  margin: 0 auto;
+  padding: var(--nc-ad-spacing, 1.25rem) 0;
+
+  &--header {
+    background-color: var(--nc-ad-bg, #f5f5f5);
+    border-bottom: 1px solid var(--nc-ad-border, #e0e0e0);
+  }
+
+  &--before-content {
+    margin-bottom: 2rem;
+  }
+
+  &--after-content {
+    margin-top: 2rem;
+  }
+
+  &--before-footer {
+    background-color: var(--nc-ad-bg, #f5f5f5);
+    border-top: 1px solid var(--nc-ad-border, #e0e0e0);
+    border-bottom: none;
+    padding: 1.5rem 0;
+  }
+}
+
+.novacore-ad {
+  display: inline-block;
+  max-width: 100%;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  iframe,
+  ins {
+    max-width: 100%;
+  }
+}
+
+// In-content ad injected via the_content filter
+.novacore-content-ad {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  clear: both;
+}
+
+// "Advertisement" label in ad widget
+.novacore-ad-widget__label {
+  display: block;
+  font-size: var(--nc-font-size-xs, 0.75rem);
+  color: var(--nc-muted, #999);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--nc-space-2, 0.5rem);
+}
+
+// Responsive visibility helpers
+.novacore-hide-mobile {
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+.novacore-hide-tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    display: none !important;
+  }
+}
+
+.novacore-hide-desktop {
+  @media (min-width: 1024px) {
+    display: none !important;
+  }
+}

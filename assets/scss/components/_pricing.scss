@@ -1,0 +1,161 @@
+// ============================================
+// NovaCore Pricing Tables
+// ============================================
+
+.novacore-pricing {
+	padding: var(--nc-space-8);
+	background: var(--nc-surface);
+	border: 1px solid var(--nc-border);
+	border-radius: var(--nc-radius-xl);
+	text-align: center;
+	transition: all var(--nc-transition-base);
+	position: relative;
+
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--nc-shadow-xl);
+	}
+
+	// Featured / Popular plan
+	&--featured {
+		border-color: var(--nc-primary);
+		border-width: 2px;
+		box-shadow: var(--nc-shadow-lg);
+		transform: scale(1.02);
+
+		&:hover {
+			transform: scale(1.02) translateY(-4px);
+		}
+
+		.novacore-pricing__badge {
+			display: inline-block;
+		}
+	}
+
+	&__badge {
+		display: none;
+		position: absolute;
+		top: var(--nc-space-4);
+		right: var(--nc-space-4);
+		padding: 0.25rem 0.75rem;
+		font-size: var(--nc-font-size-xs);
+		font-weight: var(--nc-font-weight-semibold);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #fff;
+		background: var(--nc-primary);
+		border-radius: var(--nc-radius-full);
+	}
+
+	&__header {
+		margin-bottom: var(--nc-space-6);
+	}
+
+	&__name {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-xl);
+		font-weight: var(--nc-font-weight-bold);
+		color: var(--nc-heading);
+		margin-bottom: var(--nc-space-2);
+	}
+
+	&__description {
+		font-size: var(--nc-font-size-sm);
+		color: var(--nc-contrast);
+	}
+
+	&__price {
+		margin-bottom: var(--nc-space-6);
+		padding: var(--nc-space-6) 0;
+		border-top: 1px solid var(--nc-border);
+		border-bottom: 1px solid var(--nc-border);
+
+		&-amount {
+			font-family: var(--nc-font-heading);
+			font-size: var(--nc-font-size-5xl);
+			font-weight: var(--nc-font-weight-extrabold);
+			color: var(--nc-heading);
+			line-height: 1;
+		}
+
+		&-currency {
+			font-size: var(--nc-font-size-2xl);
+			font-weight: var(--nc-font-weight-semibold);
+			color: var(--nc-contrast);
+			vertical-align: super;
+		}
+
+		&-period {
+			display: block;
+			font-size: var(--nc-font-size-sm);
+			color: var(--nc-muted);
+			margin-top: var(--nc-space-1);
+		}
+	}
+
+	&__features {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 var(--nc-space-8);
+		text-align: left;
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: var(--nc-space-3);
+			padding: var(--nc-space-3) 0;
+			font-size: var(--nc-font-size-sm);
+			color: var(--nc-contrast);
+			border-bottom: 1px solid var(--nc-border-light);
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			svg {
+				width: 18px;
+				height: 18px;
+				flex-shrink: 0;
+				color: var(--nc-success);
+			}
+
+			&.is-disabled {
+				color: var(--nc-muted);
+				text-decoration: line-through;
+
+				svg {
+					color: var(--nc-error);
+				}
+			}
+		}
+	}
+
+	&__action {
+		.novacore-btn {
+			width: 100%;
+		}
+	}
+}
+
+// Pricing grid
+.novacore-pricing-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--nc-space-6);
+	align-items: start;
+
+	@include media-md {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include media-xl {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	// 4 columns
+	&--4 {
+		@include media-xl {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}

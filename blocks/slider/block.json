@@ -1,0 +1,47 @@
+{
+	"apiVersion": 3,
+	"name": "novacore/slider",
+	"title": "Slider / Carousel",
+	"category": "novacore",
+	"icon": "slides",
+	"description": "Display an image slider or carousel with navigation.",
+	"keywords": ["slider", "carousel", "gallery", "images"],
+	"version": "1.0.0",
+	"textdomain": "novacore",
+	"attributes": {
+		"images": {
+			"type": "string",
+			"default": ""
+		},
+		"slideHeight": {
+			"type": "number",
+			"default": 500
+		},
+		"autoplay": {
+			"type": "boolean",
+			"default": true
+		},
+		"autoplaySpeed": {
+			"type": "number",
+			"default": 5000
+		},
+		"showDots": {
+			"type": "boolean",
+			"default": true
+		},
+		"showArrows": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"color": {
+			"background": true
+		},
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	}
+}

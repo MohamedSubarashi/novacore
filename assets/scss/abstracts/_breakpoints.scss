@@ -1,0 +1,45 @@
+// ============================================
+// NovaCore Breakpoint Classes & Utilities
+// ============================================
+
+// Visibility helpers
+.hide-sm { @include media-max-sm { display: none !important; } }
+.hide-md { @include media-max-md { display: none !important; } }
+.hide-lg { @include media-max-lg { display: none !important; } }
+.hide-xl { @include media-max-xl { display: none !important; } }
+
+.show-sm { display: none; @include media-sm { display: revert; } }
+.show-md { display: none; @include media-md { display: revert; } }
+.show-lg { display: none; @include media-lg { display: revert; } }
+.show-xl { display: none; @include media-xl { display: revert; } }
+
+// Grid columns
+@for $i from 1 through 6 {
+	.novacore-grid--cols-#{$i} {
+		grid-template-columns: repeat(#{$i}, 1fr);
+	}
+}
+
+@include media-max-lg {
+	@for $i from 1 through 6 {
+		.novacore-grid--cols-#{$i} {
+			grid-template-columns: repeat(if($i > 3, 3, $i), 1fr);
+		}
+	}
+}
+
+@include media-max-md {
+	@for $i from 1 through 6 {
+		.novacore-grid--cols-#{$i} {
+			grid-template-columns: repeat(if($i > 2, 2, $i), 1fr);
+		}
+	}
+}
+
+@include media-max-sm {
+	@for $i from 1 through 6 {
+		.novacore-grid--cols-#{$i} {
+			grid-template-columns: 1fr;
+		}
+	}
+}

@@ -1,0 +1,95 @@
+// ============================================
+// NovaCore Contact Page
+// ============================================
+
+.novacore-contact {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--nc-space-8);
+
+	@include media-lg {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	&__info {
+		&-title {
+			font-family: var(--nc-font-heading);
+			font-size: var(--nc-font-size-2xl);
+			font-weight: var(--nc-font-weight-bold);
+			color: var(--nc-heading);
+			margin-bottom: var(--nc-space-4);
+		}
+
+		&-text {
+			font-size: var(--nc-font-size-md);
+			color: var(--nc-contrast);
+			line-height: var(--nc-line-height-relaxed);
+			margin-bottom: var(--nc-space-8);
+		}
+	}
+
+	&__details {
+		display: grid;
+		gap: var(--nc-space-4);
+	}
+
+	&__detail {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--nc-space-4);
+		padding: var(--nc-space-4);
+		background: var(--nc-base-alt);
+		border-radius: var(--nc-radius-lg);
+
+		svg {
+			width: 24px;
+			height: 24px;
+			color: var(--nc-primary);
+			flex-shrink: 0;
+			margin-top: 2px;
+		}
+
+		&-label {
+			font-size: var(--nc-font-size-sm);
+			font-weight: var(--nc-font-weight-semibold);
+			color: var(--nc-heading);
+		}
+
+		&-value {
+			font-size: var(--nc-font-size-sm);
+			color: var(--nc-contrast);
+		}
+	}
+
+	&__form {
+		.wpcf7-form,
+		.wpforms-form {
+			label {
+				font-size: var(--nc-font-size-sm);
+				font-weight: var(--nc-font-weight-medium);
+				color: var(--nc-heading);
+				margin-bottom: var(--nc-space-2);
+				display: block;
+			}
+
+			input[type="text"],
+			input[type="email"],
+			input[type="tel"],
+			textarea {
+				width: 100%;
+				margin-bottom: var(--nc-space-5);
+			}
+
+			input[type="submit"],
+			button[type="submit"] {
+				@include btn-base;
+				background: var(--nc-primary);
+				color: #fff;
+
+				&:hover {
+					background: var(--nc-primary-hover);
+				}
+			}
+		}
+	}
+}

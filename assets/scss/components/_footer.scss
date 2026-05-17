@@ -1,0 +1,90 @@
+// ============================================
+// NovaCore Footer Components
+// ============================================
+
+// Newsletter section
+.novacore-newsletter {
+	background: linear-gradient(135deg, var(--nc-primary), var(--nc-accent));
+	padding: var(--nc-space-12) 0;
+	text-align: center;
+	color: #fff;
+
+	&__title {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-3xl);
+		font-weight: var(--nc-font-weight-bold);
+		margin-bottom: var(--nc-space-3);
+	}
+
+	&__text {
+		font-size: var(--nc-font-size-lg);
+		opacity: 0.9;
+		margin-bottom: var(--nc-space-6);
+	}
+
+	&__form {
+		max-width: 480px;
+		margin: 0 auto;
+
+		.novacore-newsletter-form {
+			input[type="email"] {
+				border-color: rgba(255, 255, 255, 0.3);
+				background: rgba(255, 255, 255, 0.1);
+				color: #fff;
+
+				&::placeholder {
+					color: rgba(255, 255, 255, 0.7);
+				}
+
+				&:focus {
+					border-color: rgba(255, 255, 255, 0.6);
+					box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+				}
+			}
+
+			button {
+				background: #fff;
+				color: var(--nc-primary);
+				font-weight: var(--nc-font-weight-semibold);
+
+				&:hover {
+					background: var(--nc-base-alt);
+				}
+			}
+		}
+	}
+}
+
+// Social icons
+.novacore-social-icons {
+	display: flex;
+	gap: var(--nc-space-3);
+
+	a {
+		@include flex-center;
+		width: 36px;
+		height: 36px;
+		border-radius: var(--nc-radius-md);
+		background: var(--nc-header-bg);
+		color: var(--nc-header-text);
+		transition: all var(--nc-transition-fast);
+
+		&:hover {
+			background: var(--nc-accent-hover);
+			color: #fff;
+			transform: translateY(-2px);
+		}
+	}
+}
+
+// Footer site name link in copyright
+.novacore-footer__site-name {
+	color: inherit;
+	text-decoration: none;
+	font-weight: var(--nc-font-weight-semibold);
+	transition: color var(--nc-transition-fast);
+
+	&:hover {
+		color: var(--nc-primary);
+	}
+}

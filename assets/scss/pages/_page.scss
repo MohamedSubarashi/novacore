@@ -1,0 +1,72 @@
+// ============================================
+// NovaCore Page Styles
+// ============================================
+
+.novacore-page-content {
+	max-width: var(--nc-content-width);
+	margin: 0 auto;
+
+	&__header {
+		margin-bottom: var(--nc-space-8);
+	}
+
+	&__title {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-3xl);
+		font-weight: var(--nc-font-weight-bold);
+		color: var(--nc-heading);
+
+		@include media-md {
+			font-size: var(--nc-font-size-4xl);
+		}
+	}
+
+	&__body {
+		font-size: var(--nc-font-size-md);
+		color: var(--nc-contrast);
+		line-height: var(--nc-line-height-loose);
+
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: var(--nc-space-10);
+			margin-bottom: var(--nc-space-4);
+		}
+
+		h2 { font-size: var(--nc-font-size-3xl); }
+		h3 { font-size: var(--nc-font-size-2xl); }
+
+		p {
+			margin-bottom: var(--nc-space-5);
+		}
+
+		ul, ol {
+			margin-bottom: var(--nc-space-5);
+			padding-left: var(--nc-space-6);
+		}
+
+		ul { list-style: disc; }
+		ol { list-style: decimal; }
+
+		li {
+			margin-bottom: var(--nc-space-2);
+		}
+
+		a {
+			text-decoration: underline;
+			text-underline-offset: 2px;
+		}
+
+		img {
+			border-radius: var(--nc-radius-lg);
+			margin: var(--nc-space-8) 0;
+		}
+
+		.wp-block-image,
+		.wp-block-cover {
+			margin: var(--nc-space-8) 0;
+		}
+
+		.wp-block-table {
+			margin: var(--nc-space-8) 0;
+		}
+	}
+}

@@ -1,0 +1,141 @@
+// ============================================
+// NovaCore Dark Mode
+// ============================================
+
+// Dark component styles shared between forced dark and system dark
+@mixin dark-component-styles {
+	.novacore-header {
+		border-bottom-color: var(--nc-border);
+
+		&.is-transparent .novacore-header__inner {
+			color: var(--nc-heading);
+			a { color: var(--nc-contrast); }
+		}
+	}
+
+	.novacore-header__brand-section {
+		background: var(--nc-surface);
+		border-bottom-color: var(--nc-border);
+	}
+
+	.novacore-header__brand-col {
+		.novacore-header__brand .novacore-logo {
+			color: var(--nc-heading);
+		}
+	}
+
+	.novacore-card {
+		background: var(--nc-surface);
+		border-color: var(--nc-border);
+	}
+
+	.novacore-footer { border-top-color: var(--nc-border); }
+
+	.novacore-sidebar .widget {
+		background: var(--nc-surface);
+		border-color: var(--nc-border);
+	}
+
+	.novacore-search-popup__form { background: var(--nc-surface); }
+	.novacore-search-popup__result-item {
+		border-color: var(--nc-border);
+		&:hover { background: var(--nc-surface-alt); }
+	}
+
+	.novacore-scroll-top { box-shadow: var(--nc-shadow-lg); }
+
+	.novacore-author-box {
+		background: var(--nc-surface);
+		border-color: var(--nc-border);
+	}
+
+	.novacore-single__tag {
+		background: var(--nc-surface-alt);
+		border-color: var(--nc-border);
+	}
+
+	.novacore-pricing {
+		background: var(--nc-surface);
+		border-color: var(--nc-border);
+		&--featured { border-color: var(--nc-primary); }
+	}
+
+	blockquote {
+		background: var(--nc-surface-alt);
+		border-left-color: var(--nc-primary);
+	}
+
+	pre {
+		background: var(--nc-surface-alt);
+		border-color: var(--nc-border);
+	}
+
+	input, textarea, select {
+		background: var(--nc-surface);
+		border-color: var(--nc-border);
+		color: var(--nc-heading);
+		&:focus {
+			border-color: var(--nc-primary);
+			box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+		}
+	}
+
+	.novacore-comment__body {
+		background: var(--nc-surface);
+		border-color: var(--nc-border);
+	}
+
+	.novacore-testimonial {
+		background: var(--nc-surface);
+		border-color: var(--nc-border);
+	}
+
+	.novacore-nav__menu .sub-menu,
+	.mega-menu {
+		background: var(--nc-surface);
+		border-color: var(--nc-border);
+		box-shadow: var(--nc-shadow-xl);
+	}
+
+	.novacore-modal__content { background: var(--nc-surface); }
+	.novacore-off-canvas {
+		background: var(--nc-base-alt);
+		box-shadow: var(--nc-shadow-2xl);
+	}
+}
+
+// Dark mode variables
+@mixin dark-mode-vars {
+	--nc-base: #0f172a;
+	--nc-base-alt: #1e293b;
+	--nc-surface: #1e293b;
+	--nc-surface-alt: #334155;
+	--nc-border: #334155;
+	--nc-border-light: #1e293b;
+	--nc-contrast: #cbd5e1;
+	--nc-contrast-alt: #94a3b8;
+	--nc-heading: #f1f5f9;
+	--nc-muted: #64748b;
+	--nc-primary-light: rgba(22, 163, 74, 0.15);
+	--nc-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+	--nc-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+	--nc-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+	--nc-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+	--nc-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+	--nc-glass-bg: rgba(30, 41, 59, 0.7);
+	--nc-glass-border: rgba(51, 65, 85, 0.3);
+}
+
+// 1. Forced dark mode
+body.dark-mode {
+	@include dark-mode-vars;
+	@include dark-component-styles;
+}
+
+// 2. System dark mode (prefers-color-scheme)
+body.dark-mode-system {
+	@media (prefers-color-scheme: dark) {
+		@include dark-mode-vars;
+		@include dark-component-styles;
+	}
+}

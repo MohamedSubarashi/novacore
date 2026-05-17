@@ -1,0 +1,157 @@
+// ============================================
+// NovaCore Footer Layout
+// ============================================
+
+.novacore-footer {
+	background: var(--nc-base-alt);
+	border-top: 1px solid var(--nc-border);
+	margin-top: var(--nc-space-12);
+
+	&__brand {
+		.custom-logo-link img {
+			max-width: 200px;
+			height: auto;
+		}
+	}
+
+	&__widgets {
+		padding: var(--nc-space-12) 0;
+	}
+
+	&__column {
+		.widget {
+			margin-bottom: var(--nc-space-8);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.widget-title {
+				font-family: var(--nc-font-heading);
+				font-size: var(--nc-font-size-lg);
+				font-weight: var(--nc-font-weight-semibold);
+				color: var(--nc-heading);
+				margin-bottom: var(--nc-space-4);
+			}
+
+			ul {
+				li {
+					padding: var(--nc-space-2) 0;
+
+					a {
+						color: var(--nc-contrast);
+
+						&:hover {
+							color: var(--nc-primary);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__top {
+		border-top: 1px solid var(--nc-border);
+		padding: var(--nc-space-6) 0;
+	}
+
+	&__top-inner {
+		@include flex-between;
+		flex-wrap: wrap;
+		gap: var(--nc-space-4);
+	}
+
+	&__top-left,
+	&__top-right {
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-4);
+		flex-wrap: wrap;
+	}
+
+	&__bottom {
+		border-top: 1px solid var(--nc-border);
+		padding: var(--nc-space-6) 0;
+	}
+
+	&__inner {
+		@include flex-between;
+		flex-wrap: wrap;
+		gap: var(--nc-space-4);
+	}
+
+	&__bottom-left {
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-4);
+		flex-wrap: wrap;
+	}
+
+	&__bottom-right {
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-4);
+		flex-wrap: wrap;
+
+		.novacore-dev-link {
+			font-size: var(--nc-font-size-sm);
+			color: var(--nc-contrast);
+
+			&:hover {
+				color: var(--nc-primary);
+			}
+		}
+
+		.novacore-donate-btn {
+			display: inline-flex;
+			align-items: center;
+			font-size: var(--nc-font-size-sm);
+			font-weight: var(--nc-font-weight-semibold);
+			padding: var(--nc-space-2) var(--nc-space-4);
+			border-radius: var(--nc-radius-md);
+			background: var(--nc-primary);
+			color: #fff;
+			text-decoration: none;
+			transition: opacity var(--nc-transition-fast);
+
+			&:hover {
+				opacity: 0.85;
+				color: #fff;
+			}
+		}
+	}
+
+	&__copyright {
+		font-size: var(--nc-font-size-sm);
+		color: var(--nc-muted);
+	}
+
+	&__menu {
+		@include flex-center;
+		gap: var(--nc-space-4);
+		flex-wrap: wrap;
+
+		a {
+			font-size: var(--nc-font-size-sm);
+			color: var(--nc-contrast);
+
+			&:hover {
+				color: var(--nc-primary);
+			}
+		}
+	}
+
+	.novacore-social-icons a {
+		width: 32px;
+		height: 32px;
+		background: transparent;
+		color: var(--nc-header-bg);
+
+		&:hover {
+			background: var(--nc-accent-hover);
+			color: #fff;
+			transform: none;
+		}
+	}
+
+}

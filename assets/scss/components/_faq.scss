@@ -1,0 +1,86 @@
+// ============================================
+// NovaCore FAQ Accordion
+// ============================================
+
+.novacore-faq {
+	max-width: 768px;
+	margin: 0 auto;
+
+	&__item {
+		border: 1px solid var(--nc-border);
+		border-radius: var(--nc-radius-lg);
+		margin-bottom: var(--nc-space-3);
+		overflow: hidden;
+		transition: all var(--nc-transition-base);
+
+		&:hover {
+			border-color: var(--nc-contrast-alt);
+		}
+
+		&.is-active {
+			border-color: var(--nc-primary);
+			box-shadow: 0 0 0 1px var(--nc-primary);
+
+			.novacore-faq__question {
+				background: var(--nc-primary-light);
+			}
+
+			.novacore-faq__icon {
+				transform: rotate(45deg);
+				color: var(--nc-primary);
+			}
+		}
+	}
+
+	&__question {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding: var(--nc-space-4) var(--nc-space-6);
+		font-size: var(--nc-font-size-md);
+		font-weight: var(--nc-font-weight-medium);
+		color: var(--nc-heading);
+		text-align: left;
+		background: var(--nc-base);
+		border: none;
+		cursor: pointer;
+		transition: background var(--nc-transition-fast);
+
+		&:hover {
+			background: var(--nc-base-alt);
+		}
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		width: 20px;
+		height: 20px;
+		color: var(--nc-contrast);
+		transition: all var(--nc-transition-fast);
+
+		&::before {
+			content: '+';
+			font-size: 1.25rem;
+			font-weight: var(--nc-font-weight-light);
+			line-height: 1;
+		}
+	}
+
+	&__answer {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height var(--nc-transition-base), padding var(--nc-transition-base);
+
+		.is-active & {
+			max-height: 500px;
+			padding: 0 var(--nc-space-6) var(--nc-space-6);
+		}
+
+		p {
+			font-size: var(--nc-font-size-sm);
+			color: var(--nc-contrast);
+			line-height: var(--nc-line-height-relaxed);
+		}
+	}
+}

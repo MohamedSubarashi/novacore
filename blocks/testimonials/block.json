@@ -1,0 +1,39 @@
+{
+	"apiVersion": 3,
+	"name": "novacore/testimonial",
+	"title": "Testimonial",
+	"category": "novacore",
+	"icon": "format-quote",
+	"description": "Display a customer testimonial with rating and author info.",
+	"keywords": ["testimonial", "review", "quote"],
+	"version": "1.0.0",
+	"textdomain": "novacore",
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "Amazing theme! Highly recommended."
+		},
+		"authorName": {
+			"type": "string",
+			"default": "John Doe"
+		},
+		"authorRole": {
+			"type": "string",
+			"default": "CEO, Company"
+		},
+		"rating": {
+			"type": "number",
+			"default": 5
+		}
+	},
+	"supports": {
+		"align": ["wide"],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	}
+}

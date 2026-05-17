@@ -1,0 +1,234 @@
+// ============================================
+// NovaCore Header Components
+// ============================================
+
+// Search popup
+.novacore-search-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	z-index: var(--nc-z-modal);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all var(--nc-transition-base);
+
+	&.is-open {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__inner {
+		width: 100%;
+		max-width: 640px;
+		padding: var(--nc-space-6);
+	}
+
+	&__form {
+		display: flex;
+		gap: var(--nc-space-3);
+		background: var(--nc-base);
+		border-radius: var(--nc-radius-xl);
+		padding: var(--nc-space-3);
+		box-shadow: var(--nc-shadow-2xl);
+	}
+
+	&__input {
+		flex: 1;
+		border: none !important;
+		font-size: var(--nc-font-size-lg) !important;
+
+		&:focus {
+			box-shadow: none !important;
+		}
+	}
+
+	&__submit {
+		padding: 0.75rem 1.5rem;
+		background: var(--nc-primary);
+		color: #fff;
+		border: none;
+		border-radius: var(--nc-radius-md);
+		font-weight: var(--nc-font-weight-semibold);
+		cursor: pointer;
+		transition: background var(--nc-transition-fast);
+
+		&:hover {
+			background: var(--nc-primary-hover);
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: var(--nc-space-6);
+		right: var(--nc-space-6);
+		@include flex-center;
+		width: 48px;
+		height: 48px;
+		border-radius: var(--nc-radius-full);
+		background: var(--nc-base);
+		color: var(--nc-heading);
+		box-shadow: var(--nc-shadow-md);
+		cursor: pointer;
+		transition: all var(--nc-transition-fast);
+
+		&:hover {
+			background: var(--nc-base-alt);
+			transform: rotate(90deg);
+		}
+	}
+
+	&__results {
+		margin-top: var(--nc-space-4);
+		background: var(--nc-base);
+		border-radius: var(--nc-radius-lg);
+		box-shadow: var(--nc-shadow-lg);
+		max-height: 50vh;
+		overflow-y: auto;
+
+		&:empty {
+			display: none;
+		}
+	}
+
+	&__result-item {
+		padding: var(--nc-space-4);
+		border-bottom: 1px solid var(--nc-border);
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-4);
+		cursor: pointer;
+		transition: background var(--nc-transition-fast);
+
+		&:hover {
+			background: var(--nc-base-alt);
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		img {
+			width: 48px;
+			height: 48px;
+			border-radius: var(--nc-radius-md);
+			object-fit: cover;
+		}
+
+		&-title {
+			font-size: var(--nc-font-size-sm);
+			font-weight: var(--nc-font-weight-medium);
+			color: var(--nc-heading);
+		}
+
+		&-type {
+			font-size: var(--nc-font-size-xs);
+			color: var(--nc-muted);
+		}
+	}
+}
+
+// Dark mode toggle
+.novacore-dark-toggle {
+	@include flex-center;
+	width: 40px;
+	height: 40px;
+	border-radius: var(--nc-radius-md);
+	color: var(--nc-contrast);
+	cursor: pointer;
+	transition: all var(--nc-transition-fast);
+
+	&:hover {
+		background: var(--nc-base-alt);
+		color: var(--nc-heading);
+	}
+
+	.sun-icon {
+		display: none;
+	}
+
+	.moon-icon {
+		display: block;
+	}
+
+	.dark-mode &,
+	.dark-mode-system & {
+		@media (prefers-color-scheme: dark) {
+			.sun-icon { display: block; }
+			.moon-icon { display: none; }
+		}
+	}
+}
+
+// Off-canvas cart / panel
+.novacore-off-canvas {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 400px;
+	max-width: 100%;
+	height: 100%;
+	background: var(--nc-base);
+	box-shadow: var(--nc-shadow-2xl);
+	z-index: var(--nc-z-modal);
+	padding: var(--nc-space-6);
+	overflow-y: auto;
+	transform: translateX(100%);
+	transition: transform var(--nc-transition-base);
+
+	&.is-open {
+		transform: translateX(0);
+	}
+
+	&__header {
+		@include flex-between;
+		margin-bottom: var(--nc-space-6);
+		padding-bottom: var(--nc-space-4);
+		border-bottom: 1px solid var(--nc-border);
+	}
+
+	&__title {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-xl);
+		font-weight: var(--nc-font-weight-bold);
+		color: var(--nc-heading);
+	}
+
+	&__close {
+		@include flex-center;
+		width: 36px;
+		height: 36px;
+		border-radius: var(--nc-radius-md);
+		color: var(--nc-contrast);
+
+		&:hover {
+			background: var(--nc-base-alt);
+		}
+	}
+}
+
+// Overlay
+.novacore-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: calc(var(--nc-z-modal) - 1);
+	opacity: 0;
+	visibility: hidden;
+	transition: all var(--nc-transition-base);
+
+	&.is-open {
+		opacity: 1;
+		visibility: visible;
+	}
+}

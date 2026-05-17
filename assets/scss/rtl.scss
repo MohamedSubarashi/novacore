@@ -1,0 +1,185 @@
+// ============================================
+// NovaCore RTL Styles
+// ============================================
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/breakpoints';
+
+body.rtl {
+	direction: rtl;
+	unicode-bidi: embed;
+
+	// Header
+	.novacore-header__inner {
+		flex-direction: row-reverse;
+	}
+
+	.novacore-nav__menu {
+		li {
+			&.menu-item-has-children > a::after {
+				margin-left: 0;
+				margin-right: var(--nc-space-2);
+				transform: rotate(-135deg);
+			}
+		}
+
+		.sub-menu {
+			left: auto;
+			right: 0;
+
+			.sub-menu {
+				left: auto;
+				right: 100%;
+				margin-left: 0;
+				margin-right: var(--nc-space-1);
+			}
+
+			.menu-item-has-children > a::after {
+				margin-left: var(--nc-space-2);
+				margin-right: auto;
+				transform: rotate(135deg);
+			}
+		}
+	}
+
+	// Layout
+	.novacore-layout {
+		@include media-lg {
+			flex-direction: row-reverse;
+		}
+
+		&.novacore-layout--home {
+			@include media-lg {
+				float: right;
+			}
+		}
+	}
+
+	.novacore-sidebar-area {
+		@include media-lg {
+			float: left;
+		}
+	}
+
+	// Text alignment
+	.novacore-single,
+	.novacore-page-content {
+		text-align: right;
+	}
+
+	// Forms
+	input[type="checkbox"],
+	input[type="radio"] {
+		margin-right: 0;
+		margin-left: var(--nc-space-2);
+	}
+
+	select {
+		background-position: left 0.75rem center;
+		padding-right: 0.875rem;
+		padding-left: 2.5rem;
+	}
+
+	// Alignments
+	.alignleft {
+		float: right;
+		margin-right: 0;
+		margin-left: var(--nc-space-6);
+	}
+
+	.alignright {
+		float: left;
+		margin-left: 0;
+		margin-right: var(--nc-space-6);
+	}
+
+	// Blockquote
+	blockquote {
+		border-left: none;
+		border-right: 4px solid var(--nc-primary);
+		border-radius: var(--nc-radius-md) 0 0 var(--nc-radius-md);
+	}
+
+	// Meta
+	.novacore-single__meta {
+		flex-direction: row-reverse;
+	}
+
+	// Comments
+	.novacore-comment .children {
+		margin-left: 0;
+		margin-right: var(--nc-space-8);
+
+		@include media-max-sm {
+			margin-right: var(--nc-space-4);
+		}
+	}
+
+	// Buttons
+	.novacore-card__read-more svg {
+		transform: rotate(180deg);
+	}
+
+	.novacore-card__read-more:hover svg {
+		transform: rotate(180deg) translateX(4px);
+	}
+
+	// Scroll to top
+	.novacore-scroll-top {
+		right: auto;
+		left: 2rem;
+
+		@include media-max-sm {
+			right: auto;
+			left: 1rem;
+		}
+	}
+
+	// Off canvas
+	.novacore-off-canvas {
+		right: auto;
+		left: 0;
+		transform: translateX(-100%);
+	}
+
+	// Pricing
+	.novacore-pricing__features li {
+		text-align: right;
+	}
+
+	// Badge
+	.novacore-pricing__badge {
+		right: auto;
+		left: var(--nc-space-4);
+	}
+
+	// Testimonial quote
+	.novacore-testimonial::before {
+		right: auto;
+		left: var(--nc-space-6);
+	}
+
+	// Search popup
+	.novacore-search-popup__close {
+		right: auto;
+		left: var(--nc-space-6);
+	}
+
+	// Nav menu
+	.novacore-nav__menu li.menu-item-has-children > a::after {
+		margin-left: 0;
+		margin-right: var(--nc-space-2);
+	}
+
+	// List padding
+	ul, ol {
+		padding-left: 0;
+		padding-right: var(--nc-space-6);
+	}
+
+	// Meta icons
+	.novacore-card__read-more {
+		flex-direction: row-reverse;
+	}
+}

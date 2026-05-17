@@ -1,0 +1,59 @@
+{
+	"apiVersion": 3,
+	"name": "novacore/pricing",
+	"title": "Pricing Table",
+	"category": "novacore",
+	"icon": "money",
+	"description": "Display pricing plans with features and CTA button.",
+	"keywords": ["pricing", "plans", "price"],
+	"version": "1.0.0",
+	"textdomain": "novacore",
+	"attributes": {
+		"planName": {
+			"type": "string",
+			"default": "Basic"
+		},
+		"price": {
+			"type": "string",
+			"default": "$19"
+		},
+		"currency": {
+			"type": "string",
+			"default": "$"
+		},
+		"period": {
+			"type": "string",
+			"default": "/month"
+		},
+		"description": {
+			"type": "string",
+			"default": "Perfect for getting started"
+		},
+		"features": {
+			"type": "string",
+			"default": "Feature 1\nFeature 2\nFeature 3"
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Choose Plan"
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"featured": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"align": ["wide"],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
+		}
+	}
+}

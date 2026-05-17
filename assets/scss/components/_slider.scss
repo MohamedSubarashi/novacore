@@ -1,0 +1,281 @@
+// ============================================
+// NovaCore Slider / Carousel
+// ============================================
+
+.novacore-slider {
+	position: relative;
+	overflow: hidden;
+	border-radius: var(--nc-radius-xl);
+
+	&__track {
+		display: flex;
+		transition: transform var(--nc-transition-slow);
+		will-change: transform;
+	}
+
+	&__slide {
+		flex: 0 0 100%;
+		max-width: 100%;
+		opacity: 0;
+		transition: opacity var(--nc-transition-base);
+
+		&.is-active {
+			opacity: 1;
+		}
+	}
+
+	&__figure {
+		margin: 0;
+		position: relative;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+	}
+
+	&__caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: var(--nc-space-6);
+		background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+		color: #fff;
+		font-size: var(--nc-font-size-sm);
+		margin: 0;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 44px;
+		height: 44px;
+		border-radius: var(--nc-radius-full);
+		background: rgba(255, 255, 255, 0.9);
+		border: none;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--nc-heading);
+		box-shadow: var(--nc-shadow-md);
+		transition: all var(--nc-transition-fast);
+		z-index: 2;
+
+		&:hover {
+			background: #fff;
+			box-shadow: var(--nc-shadow-lg);
+			transform: translateY(-50%) scale(1.05);
+		}
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+
+		&--prev {
+			left: var(--nc-space-4);
+		}
+
+		&--next {
+			right: var(--nc-space-4);
+		}
+
+		@media (max-width: 639px) {
+			width: 36px;
+			height: 36px;
+
+			svg {
+				width: 16px;
+				height: 16px;
+			}
+
+			&--prev {
+				left: var(--nc-space-2);
+			}
+
+			&--next {
+				right: var(--nc-space-2);
+			}
+		}
+	}
+
+	&__dots {
+		position: absolute;
+		bottom: var(--nc-space-4);
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		gap: var(--nc-space-2);
+		z-index: 2;
+	}
+
+	&__dot {
+		width: 10px;
+		height: 10px;
+		border-radius: var(--nc-radius-full);
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		background: transparent;
+		cursor: pointer;
+		padding: 0;
+		transition: all var(--nc-transition-fast);
+
+		&.is-active {
+			background: #fff;
+			border-color: #fff;
+			transform: scale(1.2);
+		}
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	// Reduced motion
+	@media (prefers-reduced-motion: reduce) {
+		&__track {
+			transition: none;
+		}
+	}
+}
+
+// Post Slider Variant
+.novacore-post-slider {
+	border-radius: 0;
+
+	&__slide {
+		position: relative;
+	}
+
+	&__article {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		overflow: hidden;
+		height: var(--nc-slider-height, 420px);
+
+		@include media-md {
+			height: var(--nc-slider-height, 480px);
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		inset: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			transition: transform var(--nc-transition-slow);
+		}
+	}
+
+	&__overlay {
+		position: relative;
+		width: 100%;
+		padding: var(--nc-space-8);
+		background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+		color: #fff;
+		z-index: 1;
+	}
+
+	&__content {
+		max-width: 720px;
+	}
+
+	&__cat {
+		display: inline-block;
+		font-size: var(--nc-font-size-xs);
+		font-weight: var(--nc-font-weight-semibold);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--nc-primary);
+		background: rgba(255, 255, 255, 0.15);
+		backdrop-filter: blur(4px);
+		padding: 0.25rem 0.75rem;
+		border-radius: var(--nc-radius-sm);
+		margin-bottom: var(--nc-space-3);
+	}
+
+	&__title {
+		font-size: var(--nc-font-size-xl);
+		font-weight: var(--nc-font-weight-bold);
+		margin-bottom: var(--nc-space-2);
+		line-height: var(--nc-line-height-tight);
+
+		@include media-md {
+			font-size: var(--nc-font-size-3xl);
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__date {
+		display: inline-block;
+		font-size: var(--nc-font-size-sm);
+		color: rgba(255, 255, 255, 0.7);
+		margin-bottom: var(--nc-space-2);
+	}
+
+	&__excerpt {
+		font-size: var(--nc-font-size-sm);
+		color: rgba(255, 255, 255, 0.85);
+		line-height: var(--nc-line-height-relaxed);
+		margin: 0;
+	}
+
+	// Hover effect on slides
+	.sliding-false &__slide:hover &__bg img {
+		transform: scale(1.05);
+	}
+}
+
+// Hero variant - larger, full-bleed
+.novacore-post-slider--hero {
+	margin-top: 0;
+	margin-bottom: var(--nc-space-10);
+	border-radius: var(--nc-radius-xl);
+	overflow: hidden;
+
+	.novacore-post-slider__article {
+		--nc-slider-height: 480px;
+
+		@include media-md {
+			--nc-slider-height: 560px;
+		}
+
+		@include media-xl {
+			--nc-slider-height: 620px;
+		}
+	}
+
+	.novacore-post-slider__overlay {
+		padding: var(--nc-space-10);
+
+		@include media-md {
+			padding: var(--nc-space-16);
+		}
+	}
+
+	.novacore-post-slider__title {
+		font-size: var(--nc-font-size-2xl);
+
+		@include media-md {
+			font-size: var(--nc-font-size-4xl);
+		}
+	}
+}

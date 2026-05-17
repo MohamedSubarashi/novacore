@@ -1,0 +1,25 @@
+// ============================================
+// NovaCore Color Utilities
+// ============================================
+
+.nc-color-primary      { color: var(--nc-primary); }
+.nc-color-primary-hover { color: var(--nc-primary-hover); }
+.nc-color-accent       { color: var(--nc-accent); }
+.nc-color-success      { color: var(--nc-success); }
+.nc-color-warning      { color: var(--nc-warning); }
+.nc-color-error        { color: var(--nc-error); }
+.nc-color-info         { color: var(--nc-info); }
+.nc-color-muted        { color: var(--nc-muted); }
+.nc-color-heading      { color: var(--nc-heading); }
+.nc-color-contrast     { color: var(--nc-contrast); }
+
+.nc-bg-primary       { background-color: var(--nc-primary); }
+.nc-bg-primary-light { background-color: var(--nc-primary-light); }
+.nc-bg-accent        { background-color: var(--nc-accent); }
+.nc-bg-success       { background-color: var(--nc-success); }
+.nc-bg-warning       { background-color: var(--nc-warning); }
+.nc-bg-error         { background-color: var(--nc-error); }
+.nc-bg-info          { background-color: var(--nc-info); }
+.nc-bg-base          { background-color: var(--nc-base); }
+.nc-bg-base-alt      { background-color: var(--nc-base-alt); }
+.nc-bg-surface       { background-color: var(--nc-surface); }

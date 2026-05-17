@@ -1,0 +1,180 @@
+// ============================================
+// NovaCore Animation System
+// ============================================
+
+// --------------------------------------------------
+// Keyframes
+// --------------------------------------------------
+@keyframes nc-fade-in {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+
+@keyframes nc-fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes nc-fade-down {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes nc-fade-left {
+	from {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes nc-fade-right {
+	from {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes nc-scale-in {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes nc-spin {
+	to { transform: rotate(360deg); }
+}
+
+@keyframes nc-pulse {
+	0%, 100% { opacity: 1; }
+	50%      { opacity: 0.5; }
+}
+
+@keyframes nc-shimmer {
+	0%   { background-position: -200% 0; }
+	100% { background-position: 200% 0; }
+}
+
+@keyframes nc-slide-up {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes nc-slide-down {
+	from {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+// --------------------------------------------------
+// Animation Classes
+// --------------------------------------------------
+.nc-animate {
+	opacity: 0;
+
+	&.nc-animated {
+		animation-duration: 0.6s;
+		animation-fill-mode: both;
+		animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+	}
+}
+
+.nc-fade-in      { &.nc-animated { animation-name: nc-fade-in; } }
+.nc-fade-up      { &.nc-animated { animation-name: nc-fade-up; } }
+.nc-fade-down    { &.nc-animated { animation-name: nc-fade-down; } }
+.nc-fade-left    { &.nc-animated { animation-name: nc-fade-left; } }
+.nc-fade-right   { &.nc-animated { animation-name: nc-fade-right; } }
+.nc-scale-in     { &.nc-animated { animation-name: nc-scale-in; } }
+
+.nc-animate-fast    { animation-duration: 0.3s; }
+.nc-animate-slow    { animation-duration: 0.9s; }
+.nc-animate-delay-1 { animation-delay: 100ms; }
+.nc-animate-delay-2 { animation-delay: 200ms; }
+.nc-animate-delay-3 { animation-delay: 300ms; }
+.nc-animate-delay-4 { animation-delay: 400ms; }
+.nc-animate-delay-5 { animation-delay: 500ms; }
+
+// Shimmer loading placeholder
+.nc-shimmer {
+	background: linear-gradient(
+		90deg,
+		var(--nc-base-alt) 25%,
+		var(--nc-border-light) 50%,
+		var(--nc-base-alt) 75%
+	);
+	background-size: 200% 100%;
+	animation: nc-shimmer 1.5s infinite;
+}
+
+// Spinner
+.nc-spinner {
+	width: 24px;
+	height: 24px;
+	border: 3px solid var(--nc-border);
+	border-top-color: var(--nc-primary);
+	border-radius: 50%;
+	animation: nc-spin 0.6s linear infinite;
+}
+
+// Page transitions
+.nc-page-transition {
+	animation: nc-fade-in 0.3s ease;
+}
+
+// Scroll reveal
+[data-nc-reveal] {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+				transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+	&.nc-revealed {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+[data-nc-reveal="left"] {
+	transform: translateX(-30px);
+}
+[data-nc-reveal="right"] {
+	transform: translateX(30px);
+}
+[data-nc-reveal="scale"] {
+	transform: scale(0.9);
+}

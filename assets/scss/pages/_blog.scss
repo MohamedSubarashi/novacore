@@ -1,0 +1,98 @@
+// ============================================
+// NovaCore Blog Archive Styles
+// ============================================
+
+.blog, .archive, .search {
+	.novacore-main {
+		padding-top: var(--nc-space-8);
+	}
+}
+
+// Magazine layout
+.blog-layout-magazine, .archive.blog-layout-magazine {
+	.novacore-posts--magazine {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--nc-space-6);
+
+		@include media-lg {
+			grid-template-columns: 2fr 1fr;
+
+			> article:first-child {
+				grid-column: 1 / -1;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: var(--nc-space-6);
+
+				.novacore-card__thumbnail img {
+					height: 400px;
+				}
+
+				.novacore-card__title {
+					font-size: var(--nc-font-size-3xl);
+				}
+			}
+
+			> article:nth-child(2),
+			> article:nth-child(3) {
+				grid-column: 1;
+			}
+
+			> article:nth-child(n+4) {
+				grid-column: 1 / -1;
+				display: grid;
+				grid-template-columns: 200px 1fr;
+				gap: var(--nc-space-4);
+
+				.novacore-card__body {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+// Masonry layout
+.blog-layout-masonry, .archive.blog-layout-masonry {
+	.novacore-posts--masonry {
+		columns: 1;
+		column-gap: var(--nc-space-6);
+
+		@include media-md {
+			columns: 2;
+		}
+
+		@include media-xl {
+			columns: 3;
+		}
+
+		.novacore-card {
+			break-inside: avoid;
+			margin-bottom: var(--nc-space-6);
+
+			&__thumbnail img {
+				height: auto;
+			}
+		}
+	}
+}
+
+// Infinite scroll trigger
+.novacore-infinite-scroll-trigger {
+	height: 1px;
+	visibility: hidden;
+}
+
+// Reading progress bar
+.novacore-reading-progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background: linear-gradient(90deg, var(--nc-primary), var(--nc-accent));
+	z-index: var(--nc-z-toast);
+	transition: width 50ms linear;
+}

@@ -1,0 +1,199 @@
+// ============================================
+// NovaCore Card Components
+// ============================================
+
+.novacore-card {
+	@include card-base;
+
+	&__thumbnail {
+		display: block;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 225px;
+			object-fit: cover;
+			transition: transform var(--nc-transition-slow);
+		}
+
+		&:hover img {
+			transform: scale(1.05);
+		}
+	}
+
+	&__cat-badge {
+		position: absolute;
+		top: var(--nc-space-3);
+		left: var(--nc-space-3);
+		display: inline-block;
+		padding: 0.2rem 0.65rem;
+		font-size: var(--nc-font-size-xs);
+		font-weight: var(--nc-font-weight-semibold);
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+		background: var(--nc-cat-badge-bg, var(--nc-primary));
+		color: var(--nc-cat-badge-text, #fff);
+		border-radius: var(--nc-radius-sm);
+		z-index: 2;
+		pointer-events: none;
+		line-height: 1.3;
+	}
+
+	&__body {
+		padding: var(--nc-space-6);
+	}
+
+	&__categories {
+		margin-bottom: var(--nc-space-3);
+	}
+
+	&__cat {
+		display: inline-block;
+		padding: 0.25rem 0.75rem;
+		font-size: var(--nc-font-size-xs);
+		font-weight: var(--nc-font-weight-semibold);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--nc-primary);
+		background: var(--nc-primary-light);
+		border-radius: var(--nc-radius-full);
+		transition: all var(--nc-transition-fast);
+
+		&:hover {
+			background: var(--nc-primary);
+			color: #fff;
+		}
+	}
+
+	&__title {
+		font-family: var(--nc-font-heading);
+		font-size: var(--nc-font-size-xl);
+		font-weight: var(--nc-font-weight-bold);
+		line-height: var(--nc-line-height-snug);
+		margin-bottom: var(--nc-space-3);
+
+		a {
+			color: var(--nc-heading);
+			text-decoration: none;
+
+			&:hover {
+				color: var(--nc-primary);
+			}
+		}
+	}
+
+	&__meta {
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-4);
+		font-size: var(--nc-font-size-sm);
+		color: var(--nc-muted);
+		margin-bottom: var(--nc-space-3);
+	}
+
+	&__date,
+	&__reading-time {
+		display: flex;
+		align-items: center;
+		gap: var(--nc-space-1);
+	}
+
+	&__excerpt {
+		font-size: var(--nc-font-size-sm);
+		color: var(--nc-contrast);
+		line-height: var(--nc-line-height-relaxed);
+		margin-bottom: var(--nc-space-4);
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	&__read-more {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--nc-space-2);
+		font-size: var(--nc-font-size-sm);
+		font-weight: var(--nc-font-weight-semibold);
+		color: var(--nc-primary);
+		transition: gap var(--nc-transition-fast);
+		text-decoration: none;
+
+		svg {
+			transition: transform var(--nc-transition-fast);
+		}
+
+		&:hover {
+			gap: var(--nc-space-3);
+
+			svg {
+				transform: translateX(4px);
+			}
+		}
+	}
+
+	// Video format
+	&--video {
+		.novacore-card__media {
+			position: relative;
+		}
+
+		.novacore-card__play-icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			opacity: 0.9;
+			transition: opacity var(--nc-transition-fast);
+		}
+
+		&:hover .novacore-card__play-icon {
+			opacity: 1;
+		}
+	}
+}
+
+// --------------------------------------------------
+// List Layout
+// --------------------------------------------------
+.novacore-posts--list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--nc-space-6);
+
+	> * + * {
+		margin-top: 0;
+	}
+
+	.novacore-card {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 0;
+
+		@include media-md {
+			flex-direction: row;
+		}
+
+		&__thumbnail {
+			flex-shrink: 0;
+
+			@include media-md {
+				width: 300px;
+
+				img {
+					height: 100%;
+					min-height: 200px;
+				}
+			}
+		}
+
+		&__body {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"apiVersion": 3,
+	"name": "novacore/cta",
+	"title": "Call to Action",
+	"category": "novacore",
+	"icon": "megaphone",
+	"description": "Call to action section with heading, text, and button.",
+	"keywords": ["cta", "call to action", "banner"],
+	"version": "1.0.0",
+	"textdomain": "novacore",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Ready to Get Started?"
+		},
+		"description": {
+			"type": "string",
+			"default": "Join thousands of happy customers using NovaCore today."
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Get Started Now"
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": "#"
+		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"color": {
+			"background": true,
+			"text": true,
+			"gradients": true
+		},
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	}
+}

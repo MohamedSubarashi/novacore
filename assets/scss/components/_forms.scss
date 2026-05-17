@@ -1,0 +1,136 @@
+// ============================================
+// NovaCore Form Components
+// ============================================
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+textarea,
+select {
+	width: 100%;
+	padding: 0.625rem 0.875rem;
+	font-size: var(--nc-font-size-sm);
+	font-family: var(--nc-font-body);
+	color: var(--nc-heading);
+	background: var(--nc-base);
+	border: 1px solid var(--nc-border);
+	border-radius: var(--nc-radius-md);
+	transition: all var(--nc-transition-fast);
+	appearance: none;
+
+	&::placeholder {
+		color: var(--nc-muted);
+	}
+
+	&:focus {
+		outline: none;
+		border-color: var(--nc-primary);
+		box-shadow: 0 0 0 3px var(--nc-primary-light);
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+		background: var(--nc-base-alt);
+	}
+}
+
+textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+select {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+	background-size: 16px;
+	padding-right: 2.5rem;
+}
+
+// Checkbox & Radio
+input[type="checkbox"],
+input[type="radio"] {
+	width: 1.125rem;
+	height: 1.125rem;
+	margin-right: var(--nc-space-2);
+	cursor: pointer;
+	accent-color: var(--nc-primary);
+}
+
+// Labels
+label {
+	display: block;
+	font-size: var(--nc-font-size-sm);
+	font-weight: var(--nc-font-weight-medium);
+	color: var(--nc-heading);
+	margin-bottom: var(--nc-space-2);
+}
+
+// Form groups
+.novacore-form-group {
+	margin-bottom: var(--nc-space-5);
+}
+
+// Search form
+.search-form {
+	display: flex;
+	gap: var(--nc-space-2);
+
+	input[type="search"] {
+		flex: 1;
+	}
+
+	button {
+		padding: 0.625rem 1rem;
+		background: var(--nc-primary);
+		color: #fff;
+		border: none;
+		border-radius: var(--nc-radius-md);
+		cursor: pointer;
+		transition: background var(--nc-transition-fast);
+		white-space: nowrap;
+
+		&:hover {
+			background: var(--nc-primary-hover);
+		}
+	}
+}
+
+// Comment form
+.comment-form {
+	.comment-form-comment,
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		margin-bottom: var(--nc-space-5);
+	}
+
+	.form-submit {
+		margin-top: var(--nc-space-6);
+	}
+}
+
+// Newsletter form
+.novacore-newsletter-form {
+	display: flex;
+	gap: var(--nc-space-2);
+
+	@include media-max-sm {
+		flex-direction: column;
+	}
+
+	input[type="email"] {
+		flex: 1;
+	}
+}
