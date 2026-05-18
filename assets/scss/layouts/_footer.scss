@@ -122,16 +122,8 @@
 	}
 
 	&__copyright {
-		font-size: var(--nc-font-size-sm);
-		color: var(--nc-muted);
-	}
-
-	&__gpl {
 		font-size: var(--nc-font-size-xs);
 		color: var(--nc-muted);
-		opacity: 0.7;
-		text-align: center;
-		padding: var(--nc-space-2) 0 0;
 	}
 
 	&__menu {

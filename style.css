@@ -22,9 +22,6 @@ Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, c
 	display: block;
 }
 
-.novacore-footer__gpl {
+.novacore-footer__copyright {
 	font-size: 0.75em;
-	opacity: 0.7;
-	text-align: center;
-	padding: 0.5rem 0;
 }

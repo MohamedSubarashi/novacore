@@ -21,8 +21,7 @@ if ( ! function_exists( 'dynamic_footer_copyright' ) ) {
 ?>
 <div class="novacore-footer__copyright">
 	<?php echo wp_kses_post( dynamic_footer_copyright() ); ?>
-</div>
-<div class="novacore-footer__gpl">
+	<br>
 	<?php
 	printf(
 		/* translators: 1: Theme name, 2: Copyright year, 3: Author name, 4: GPL license link */
