@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'NOVACORE_VERSION', '1.8.5' );
+define( 'NOVACORE_VERSION', '1.9.2' );
 define( 'NOVACORE_DIR', get_template_directory() );
 define( 'NOVACORE_URI', get_template_directory_uri() );
 define( 'NOVACORE_ASSETS_DIR', NOVACORE_DIR . '/assets' );

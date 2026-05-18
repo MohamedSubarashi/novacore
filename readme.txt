@@ -3,7 +3,7 @@ Contributors: novacoreteam
 Requires at least: 6.2
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.8.5
+Stable tag: 1.9.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready, blog, portfolio, news, rtl-language-support, sticky-post
@@ -94,6 +94,15 @@ Go to Appearance > Customize > Header Image to upload your logo/brand image (rec
 Go to Appearance > Customize > NovaCore Ads to configure ad codes for all 6 placement areas.
 
 == Changelog ==
+
+= 1.9.2 =
+* Added COPYING file with full GPL v2 license text
+* Added GPL copyright notice to footer for Theme Review compliance
+* Fixed RSS feed returning 500 status for /?feed=rss2
+* Added blog body class to front page for Theme Review compliance
+* Added post format support with format-aware template loading
+* Added post format template parts for video
+* Improved blog layout class display on front page
 
 = 1.8.5 =
 * Added GPL copyright notice to footer for Theme Review compliance
