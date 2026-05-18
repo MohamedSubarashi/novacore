@@ -116,7 +116,7 @@ class Setup {
 	}
 
 	public function posts_per_page( \WP_Query $query ): void {
-		if ( ! is_admin() && $query->is_main_query() && ( is_home() || is_archive() ) ) {
+		if ( ! is_admin() && $query->is_main_query() && ! $query->is_feed() && ( is_home() || is_archive() ) ) {
 			$query->set( 'posts_per_page', 6 );
 		}
 	}

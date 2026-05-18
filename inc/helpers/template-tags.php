@@ -258,7 +258,7 @@ if ( ! function_exists( 'novacore_body_classes' ) ) {
 		}
 
 		$blog_layout = get_theme_mod( 'novacore_blog_layout', 'grid' );
-		if ( is_home() || is_archive() || is_search() ) {
+		if ( is_home() || is_front_page() || is_archive() || is_search() ) {
 			$classes[] = 'blog-layout-' . $blog_layout;
 		}
 
