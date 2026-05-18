@@ -49,6 +49,12 @@ A premium multi-purpose WordPress theme designed for performance, SEO, and unlim
 
 ## Changelog
 
+### 2.5.0
+- Simplified footer copyright to single GPL notice line
+- Added License & Copyright section to README.md
+- Removed non-standard license files (COPYING, copyright.txt)
+- Documented all bundled third-party resources
+
 ### 2.3.0
 - Upgraded license to GNU GPL v3 or later
 - Added LICENSE and COPYING files with full GPL v3 text
@@ -70,9 +76,16 @@ A premium multi-purpose WordPress theme designed for performance, SEO, and unlim
 ### 1.0.0
 - Initial release
 
-## License
+## License & Copyright
 
-GNU General Public License v3 or later
+NovaCore WordPress Theme, Copyright 2026 Mohamed Subarashi
+Licensed under the GNU General Public License v3 or later.
+
+## Bundled Resources
+
+- **Font Awesome** – Copyright Dave Gandy (SIL OFL 1.1) – https://fontawesome.com
+- **Inter Font** – Copyright Rasmus Andersson (SIL OFL 1.1) – https://rsms.me/inter/
+- **DM Sans Font** – Copyright Google (SIL OFL 1.1) – https://fonts.google.com/specimen/DM+Sans
 
 ## Author
 
