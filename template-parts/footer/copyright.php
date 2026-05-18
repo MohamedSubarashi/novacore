@@ -22,3 +22,15 @@ if ( ! function_exists( 'dynamic_footer_copyright' ) ) {
 <div class="novacore-footer__copyright">
 	<?php echo wp_kses_post( dynamic_footer_copyright() ); ?>
 </div>
+<div class="novacore-footer__gpl">
+	<?php
+	printf(
+		/* translators: 1: Theme name, 2: Copyright year, 3: Author name, 4: GPL license link */
+		esc_html__( '%1$s WordPress Theme, Copyright (C) %2$s %3$s. %1$s is distributed under the terms of the %4$s.', 'novacore' ),
+		esc_html( wp_get_theme()->get( 'Name' ) ),
+		gmdate( 'Y' ),
+		esc_html( wp_get_theme()->get( 'Author' ) ),
+		'<a href="https://www.gnu.org/licenses/gpl-2.0.html" rel="license">GNU GPL v2 or later</a>'
+	);
+	?>
+</div>
