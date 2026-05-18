@@ -146,7 +146,7 @@ Go to Appearance > Customize > NovaCore Ads to configure ad codes for all 6 plac
 
 == Copyright ==
 
-NovaCore WordPress Theme, (C) 2026 NovaCoreWP
+NovaCore WordPress Theme, (C) 2026 Mohamed Subarashi
 NovaCore is distributed under the terms of the GNU GPL v2 or later.
 
     This program is free software: you can redistribute it and/or modify
