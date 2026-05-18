@@ -4,8 +4,8 @@ Requires at least: 6.2
 Tested up to: 6.8
 Requires PHP: 7.4
 Stable tag: 2.0.1
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready, blog, portfolio, news, rtl-language-support, sticky-post
 
 NovaCore is a premium multi-purpose WordPress theme designed for performance, SEO, and unlimited customization. Suitable for blogs, businesses, portfolios, SaaS, agencies, eCommerce, news websites, and landing pages.
@@ -153,11 +153,11 @@ Go to Appearance > Customize > NovaCore Ads to configure ad codes for all 6 plac
 == Copyright ==
 
 NovaCore WordPress Theme, (C) 2026 Mohamed Subarashi
-NovaCore is distributed under the terms of the GNU GPL v2 or later.
+NovaCore is distributed under the terms of the GNU GPL v3 or later.
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 2 of the License, or
+    the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
     This program is distributed in the hope that it will be useful,

@@ -30,7 +30,7 @@ if ( ! function_exists( 'dynamic_footer_copyright' ) ) {
 		gmdate( 'Y' ),
 		esc_html( wp_get_theme()->get( 'Author' ) ),
 		sprintf(
-			'<a href="%s" rel="license">GNU GPL v2 or later</a>',
+			'<a href="%s" rel="license">GNU GPL v3 or later</a>',
 			esc_url( wp_get_theme()->get( 'License URI' ) )
 		)
 	);

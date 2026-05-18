@@ -8,13 +8,13 @@ Version: 2.0.1
 Requires at least: 6.2
 Tested up to: 6.8
 Requires PHP: 7.4
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: novacore
 Domain Path: /languages
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready, blog, portfolio, news, rtl-language-support, sticky-post
 
-/* NovaCore WordPress Theme, Copyright (C) 2026 Mohamed Subarashi */
+/* NovaCore WordPress Theme, Copyright (C) 2026 Mohamed Subarashi. NovaCore is distributed under the terms of the GNU GPL v3 or later. */
 
 .sticky,
 .gallery-caption,
