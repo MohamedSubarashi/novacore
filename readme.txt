@@ -3,7 +3,7 @@ Contributors: novacoreteam
 Requires at least: 6.2
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 2.4.2
+Stable tag: 2.5.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready, blog, portfolio, news, rtl-language-support, sticky-post
@@ -94,6 +94,10 @@ Go to Appearance > Customize > Header Image to upload your logo/brand image (rec
 Go to Appearance > Customize > NovaCore Ads to configure ad codes for all 6 placement areas.
 
 == Changelog ==
+
+= 2.5.0 =
+* Simplified footer copyright to single GPL notice line
+* Cleaned up duplicate copyright output
 
 = 2.4.2 =
 * Added copyright.txt with GPL v3 copyright and permission notice
