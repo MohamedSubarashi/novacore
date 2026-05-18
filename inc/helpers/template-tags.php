@@ -637,6 +637,7 @@ if ( ! function_exists( 'novacore_magazine_grid' ) ) {
 			</div>
 		</div>
 		<?php
+		return $ids;
 	}
 }
 
