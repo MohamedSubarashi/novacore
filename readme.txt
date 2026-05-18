@@ -3,7 +3,7 @@ Contributors: novacoreteam
 Requires at least: 6.2
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.9.8
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready, blog, portfolio, news, rtl-language-support, sticky-post
@@ -95,9 +95,15 @@ Go to Appearance > Customize > NovaCore Ads to configure ad codes for all 6 plac
 
 == Changelog ==
 
+= 2.0.1 =
+* Added license.txt file with GPL v2 for Theme Check detection
+* Fixed copyright author name in readme.txt
+* Merged footer copyright and GPL notices into one container
+* Fixed novacore_magazine_grid missing return statement
+
 = 1.9.8 =
 * Fixed hardcoded GPL license link — now uses theme header License URI
-* Added copyright comment in style.css for better scanner detection
+* Fixed copyright comment in style.css for better scanner detection
 * Fixed GPL copyright notice HTML escaping in footer
 
 = 1.9.2 =
