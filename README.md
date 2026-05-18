@@ -1,6 +1,6 @@
 # NovaCore WordPress Theme
 
-A premium multi-purpose WordPress theme designed for performance, SEO, and unlimited customization.
+A premium multi-purpose WordPress theme designed for performance, SEO, and unlimited customization. Suitable for blogs, businesses, portfolios, SaaS, agencies, eCommerce, news websites, and landing pages.
 
 ## Features
 
@@ -17,10 +17,22 @@ A premium multi-purpose WordPress theme designed for performance, SEO, and unlim
 - **SEO Friendly** – Semantic HTML5 markup and schema.org integration
 - **Translation Ready** – POT file included for easy localization
 - **RTL Support** – Full right-to-left language support
+- **AI-Powered** – Built-in AI tools for content generation and optimization
+- **bbPress & BuddyPress** – Community and forum styling included
 
 ## Custom Blocks
 
-- Hero, Slider/Carousel, Post Grid, Feature Grid, Buttons, Team, Counter, CTA, FAQ, Testimonials, Pricing
+- Hero Block – Full-width hero sections with overlays
+- Slider/Carousel – Responsive image and content sliders
+- Post Grid – Filterable grid layouts for posts
+- Feature Grid – Feature showcase with icons
+- Buttons – Advanced button groups
+- Team – Team member profiles
+- Counter – Animated number counters
+- CTA – Call-to-action sections
+- FAQ – Accordion FAQ sections
+- Testimonials – Client testimonial carousels
+- Pricing – Pricing table columns
 
 ## Requirements
 
@@ -37,10 +49,22 @@ A premium multi-purpose WordPress theme designed for performance, SEO, and unlim
 
 ## Changelog
 
+### 2.3.0
+- Upgraded license to GNU GPL v3 or later
+- Added LICENSE and COPYING files with full GPL v3 text
+- Added GPL copyright notice to footer
+- Fixed RSS feed 500 error for /?feed=rss2
+- Added blog body class to front page for Theme Review compliance
+- Added post format support with format-aware template loading (video, gallery, etc.)
+- Added novacore_content_template helper function
+- Fixed novacore_magazine_grid missing return statement
+- Merged footer copyright and GPL notices
+- Various Theme Review Action compliance fixes
+
 ### 1.2.1
-- Enhanced homepage slideshow with Customizer controls
-- Added video post format support
-- Added Gutenberg block styles and patterns
+- Enhanced homepage slideshow with Customizer controls (category selection, recent posts, autoplay settings)
+- Added video post format support with self-hosted HTML5 video player
+- Added Gutenberg block styles and block patterns
 - Various Theme Check compliance fixes
 
 ### 1.0.0
@@ -48,7 +72,7 @@ A premium multi-purpose WordPress theme designed for performance, SEO, and unlim
 
 ## License
 
-GNU General Public License v2 or later
+GNU General Public License v3 or later
 
 ## Author
 
