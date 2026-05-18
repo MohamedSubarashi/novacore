@@ -140,7 +140,7 @@ class Ajax {
 		if ( $query->have_posts() ) {
 			while ( $query->have_posts() ) {
 				$query->the_post();
-				get_template_part( 'template-parts/content/content', get_post_type() );
+				novacore_content_template();
 			}
 			wp_reset_postdata();
 		}

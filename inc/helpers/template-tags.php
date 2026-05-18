@@ -637,7 +637,17 @@ if ( ! function_exists( 'novacore_magazine_grid' ) ) {
 			</div>
 		</div>
 		<?php
-		return $ids;
+	}
+}
+
+if ( ! function_exists( 'novacore_content_template' ) ) {
+	function novacore_content_template(): void {
+		$format = get_post_format();
+		if ( $format ) {
+			get_template_part( 'template-parts/content/content', $format );
+		} else {
+			get_template_part( 'template-parts/content/content', get_post_type() );
+		}
 	}
 }
 

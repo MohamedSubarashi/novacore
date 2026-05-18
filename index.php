@@ -288,7 +288,7 @@ $featured_ids = [];
 		if ( $latest_query->have_posts() ) :
 			while ( $latest_query->have_posts() ) :
 				$latest_query->the_post();
-				get_template_part( 'template-parts/content/content', get_post_type() );
+				novacore_content_template();
 			endwhile;
 			wp_reset_postdata();
 		endif;
@@ -348,7 +348,7 @@ $featured_ids = [];
 			<?php
 			while ( have_posts() ) :
 				the_post();
-				get_template_part( 'template-parts/content/content', get_post_type() );
+				novacore_content_template();
 			endwhile;
 			?>
 		</div>
@@ -390,7 +390,7 @@ $featured_ids = [];
 			<?php
 			while ( have_posts() ) :
 				the_post();
-				get_template_part( 'template-parts/content/content', get_post_type() );
+				novacore_content_template();
 			endwhile;
 			?>
 		</div>
@@ -413,7 +413,7 @@ $featured_ids = [];
 			<?php
 			while ( have_posts() ) :
 				the_post();
-				get_template_part( 'template-parts/content/content', get_post_type() );
+				novacore_content_template();
 			endwhile;
 			?>
 		</div>
